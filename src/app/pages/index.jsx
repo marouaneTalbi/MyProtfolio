@@ -10,9 +10,9 @@ import Welcom from "./Welcom";
 
 export default function Index() {
   return (
-    <div>
+      <div className="relative min-h-screen bg-[url('/img.jpg')] bg-cover bg-fixed bg-center">
       <Header />
-      <main className="flex flex-col">
+      <main className="flex flex-col" >
         <Welcom />
         <AboutMeSection />
         <SkillsSection />
