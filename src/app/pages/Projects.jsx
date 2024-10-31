@@ -1,9 +1,15 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useNavigate } from 'react-router-dom';
 
 export default function ProjectsSection() {
     const ref = useRef(null);
     const inView = useInView(ref, { once: true });
+    const navigate = useNavigate();
+
+    const navigation = (route) => {
+      navigate(route);
+    };
 
     const projects = [
       {
@@ -13,6 +19,7 @@ export default function ProjectsSection() {
         endDate: "Mars 2024",
         description: "Implémentation d'un système de notifications en temps réel pour améliorer l'interaction utilisateur. Intégration de l'IA via l'API ChatGPT.",
         img:"yomeva.png",
+        route:"/etoile"
       },
       {
         name: "MY CONSTAT",
@@ -21,6 +28,7 @@ export default function ProjectsSection() {
         endDate: "Février 2024",
         description: "Développement d'une application mobile avec React Native. Utilisation de Docker pour la gestion des environnements.",
         img:"foncia.png",
+        route:"/myconstat"
       },
       {
         name: "MANAGER ROOM / AMADEUS",
@@ -29,6 +37,7 @@ export default function ProjectsSection() {
         endDate: "Septembre 2022",
         description: "Développement de composants React.js et gestion des API RESTful avec Symfony. Optimisation des performances front-end.",
         img:"thales.png",
+        route:"/amadeus"
       },
       {
         name: "ALTO TOUR",
@@ -37,6 +46,7 @@ export default function ProjectsSection() {
         endDate: "Mars 2022",
         description: "Développement avec Ionic Angular, amélioration continue de l'application selon les feedbacks clients.",
         img:"iviflo.png",
+        route:"/smartbuilding"
       }
     ];
   
@@ -61,6 +71,7 @@ export default function ProjectsSection() {
                 filter: 'blur(10px)',
                 transition: 'filter 0.1s ease',
               }}
+              onClick={()=>navigation(project.route)}
               onMouseEnter={(e) => {
                 e.currentTarget.style.filter = 'blur(0px)'; 
               }}
@@ -78,10 +89,6 @@ export default function ProjectsSection() {
               </div>
         </motion.div>
         ))}
-            
-  
-
-
         </div>
       </section>
     );

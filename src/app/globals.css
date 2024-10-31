@@ -21,3 +21,31 @@ body {
   background: var(--background);
   font-family: 'Orbitron', sans-serif; /* Utilise la police ici */
 }
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+h1 {
+  text-shadow: 
+    0 0 5px rgb(13, 0, 255),
+    0 0 10px rgb(13, 0, 255),
+    0 0 15px rgb(13, 0, 255);
+}
+
+.neon {
+    text-shadow: 
+      0 0 5px rgb(13, 0, 255),
+      0 0 10px rgb(13, 0, 255),
+      0 0 15px rgb(13, 0, 255);
+}

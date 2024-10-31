@@ -31,7 +31,7 @@ export default function SkillsSection() {
 
       <div  className="min-h-screen  flex flex-col items-center justify-center p-10 bg-white bg-opacity-50 backdrop-blur-lg rounded-lg p-6s">
         <div className="p-10">
-          <h1 className="text-2xl">SKILLS</h1>
+          <h1 className="text-5xl text-white">SKILLS</h1>
         </div>
 
         <motion.div
