@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useSidebar } from "../context/sideBarContext";
 import { ArrowLeftCircleIcon } from '@heroicons/react/24/solid'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
@@ -13,6 +13,9 @@ export default function Sidebar() {
         setTimeout(() => setHideBar(false), 500);
         setIsVisible(false);
     };
+
+
+
     const sections = [
         { name: "HOME", route: "/" },
         { name: "ABOUT", route: "/about" },

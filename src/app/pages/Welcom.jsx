@@ -21,15 +21,29 @@ export default function Welcom() {
 
   };
 
+  const getStyleOfDiv = (style) => {
+    const className = `relative ${style} m-1 p-5 rounded-lg border-8 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105`
+    return className;
+  }
+
   const hideWelcomPage = () => {
     setHideBloc(true)
   }
 
   const sections = [
-    {name:'SKILLS', route:'/skills', img: 'yomeva.png'},
-    {name:'PROJECTS', route:'/projects', img: 'foncia.png'},
-    {name:'PARCOURS', route:'/about', img: ''},
-    {name:'RESUM', route:'/cv', img: ''},
+    // {name:'PROJECTS', route:'/projects', img: 'projects.svg', style:'flex-none  w-1/2 h-50'},
+    // {name:'PARCOURS', route:'/about', img: 'experiences.svg', style:'flex-1  w-1/3 h-50'},
+    // {name:'RESUM', route:'/resum', img: 'cv.svg', style:'flex-none  w-1/2 h-50'},
+    // {name:'CONTACT', route:'/contact', img: 'personal.svg', style:'flex-1  w-1/2 h-50'},
+    // {name:'SKILLS', route:'/skills', img: 'pers.svg', style:'flex-none  w-full h-50'},
+
+    {name:'PROJECTS', route:'/projects', img: 'projects.svg', style:'flex-1  w-1/2 h-50'},
+    {name:'PARCOURS', route:'/about', img: 'experiences.svg', style:'flex-none  w-1/2 h-50'},
+    {name:'RESUM', route:'/resum', img: 'cv.svg', style:'flex-none  w-1/2 h-50'},
+    {name:'SKILLS', route:'/skills', img: 'pers.svg', style:'flex-1  w-1/2 h-50'},
+    {name:'CONTACT', route:'/contact', img: 'personal.svg', style:'flex-none  w-full h-50'},
+
+
   ]
 
   return (
@@ -76,40 +90,56 @@ export default function Welcom() {
           </div>
           </div>
       }
-      {
-        hideBloc &&
-        sections.map((section) => (
-          <div className="relative w-1/4 h-full m-2 p-10 rounded-lg border-8 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105">
-            <div className="absolute bottom-0 left-0 p-5 m-5 " >
-              <h1 className="text-3xl text-white font-bold">{section.name}</h1>
-            </div> 
-            <div 
-              key={section.name}
-              ref={ref}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: inView ? 1 : 0 }}
-              transition={{ duration: 1 }}
-              style={{
-                backgroundImage: `url(/projects/${section.img})`,
-                backgroundPosition: 'center',
-                backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat',
-                height: 1000,
-                filter: 'blur(10px)',
-                transition: 'filter 0.1s ease',
-              }}
-              onClick={()=>navigation(section.route)}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.filter = 'blur(0px)'; 
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.filter = 'blur(10px)'; 
-              }}>
 
+      {
+        hideBloc &&  
+        <div className="w-full h-full flex  flex-wrap   ">
+        {
+        sections.map((section) => (
+            // <div className="relative m-1 p-10 rounded-lg border-8 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105">
+            <div className={getStyleOfDiv(section.style)}>
+              <div className="absolute bottom-0 left-0 p-5 m-5 " >
+                <h1 className="text-3xl text-white font-bold">{section.name}</h1>
+              </div> 
+              <div 
+                key={section.name}
+                ref={ref}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: inView ? 1 : 0 }}
+                transition={{ duration: 1 }}
+                style={{
+                  backgroundImage: `url(/general/${section.img})`,
+                  backgroundPosition: 'center',
+                  backgroundSize: 'contain',
+                  backgroundRepeat: 'no-repeat',
+                  height: '100%',
+                  filter: 'blur(10px)',
+                  transition: 'filter 0.1s ease',
+                }}
+                onClick={()=>navigation(section.route)}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.filter = 'blur(0px)'; 
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.filter = 'blur(10px)'; 
+                }}>
+
+              </div>
             </div>
-          </div>
-        ))
+          ))
+        }
+
+        </div>
       }
+
+
+
+
+
+
+
+
+
     </>
   );
 }

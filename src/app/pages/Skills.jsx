@@ -1,6 +1,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import {Modal} from "../components/Modal";
+import {Technos} from "../mock/technos"
+
 
 export default function SkillsSection() {
   const ref = useRef(null);
@@ -17,22 +19,15 @@ export default function SkillsSection() {
     setModalIsOpen(false);
   };
 
-  const technos = [
-    'laravel', 'nestjs', 'nextdotjs', 'nodedotjs', 'php', 'react', 'sass', 'symfony', 'vuedotjs', 'wordpress',
-    'amazoncloudwatch', 'amazondynamodb', 'amazonec2', 'amazonecs', 'amazonrds', 'amazonroute53', 'amazons3', 'amazonwebservices',
-    'angular', 'awsamplify', 'awslambda', 'css3', 'docker', 'go', 'html5', 'javascript',
-  ];
 
-  const technoObjects = technos.map(techno => ({
+
+  const technoObjects = Technos.map(techno => ({
     name: techno,
     duration: Math.floor(Math.random() * 10) + 1 
   }));
   
   return (
     <>
-        <div className="p-10">
-          <h1 className="text-5xl text-white">SKILLS</h1>
-        </div>
         <motion.div
           ref={ref}
           initial={{ opacity: 0 }}
@@ -47,8 +42,8 @@ export default function SkillsSection() {
                 className="m-2 ml-10 p-4 bg-white rounded-full shadow-lg flex items-center justify-center"
                 onClick={() => handleTechnoClick(item.name)}
                 style={{
-                  height: '120px',
-                  width: '120px',
+                  height: '130px',
+                  width: '130px',
                 }}
                 animate={{ y: [0, -10, 0] }} // Animation de rebond
                 transition={{ 
