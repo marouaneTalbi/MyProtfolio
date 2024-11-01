@@ -9,14 +9,12 @@ export default function SkillsSection() {
   const [techno, setTechno] = useState(null);
 
   const handleTechnoClick = (tech) => {
-    console.log(tech)
     setTechno(tech);
     setModalIsOpen(true);
   };
 
   const closeModal = () => {
     setModalIsOpen(false);
-    // setTechno(null);
   };
 
   const technos = [
@@ -25,15 +23,16 @@ export default function SkillsSection() {
     'angular', 'awsamplify', 'awslambda', 'css3', 'docker', 'go', 'html5', 'javascript',
   ];
 
-
+  const technoObjects = technos.map(techno => ({
+    name: techno,
+    duration: Math.floor(Math.random() * 10) + 1 
+  }));
+  
   return (
-    <section className="min-h-screen p-10  bg-cover bg-center backdrop-blur-lg">
-
-      <div  className="min-h-screen  flex flex-col items-center justify-center p-10 bg-white bg-opacity-50 backdrop-blur-lg rounded-lg p-6s">
+    <>
         <div className="p-10">
           <h1 className="text-5xl text-white">SKILLS</h1>
         </div>
-
         <motion.div
           ref={ref}
           initial={{ opacity: 0 }}
@@ -42,25 +41,25 @@ export default function SkillsSection() {
           className="p-10 rounded"
         >
           <div className="flex flex-wrap justify-left mt-4 p-1 ">
-            {technos.map((item, index) => (
+            {technoObjects.map((item, index) => (
               <motion.div 
-                key={item} 
+                key={item.name} 
                 className="m-2 ml-10 p-4 bg-white rounded-full shadow-lg flex items-center justify-center"
-                onClick={() => handleTechnoClick(item)}
+                onClick={() => handleTechnoClick(item.name)}
                 style={{
-                  height: 200,
-                  width: 200,
+                  height: '120px',
+                  width: '120px',
                 }}
                 animate={{ y: [0, -10, 0] }} // Animation de rebond
                 transition={{ 
-                  duration: 0.6 + index * 0.2, // Durée d'animation qui augmente avec l'index
+                  duration: 0.6 + item.duration * 0.2, // Durée d'animation qui augmente avec l'index
                   repeat: Infinity,
                   repeatType: "loop",
                   ease: "easeInOut"
                 }}
               >
                 <img 
-                  src={`./technos/${item}.svg`} 
+                  src={`./technos/${item.name}.svg`} 
                   alt="Development Icon" 
                   style={{
                     height: 150,
@@ -71,10 +70,7 @@ export default function SkillsSection() {
             ))}
           </div>
         </motion.div>
-      </div>
-
-
       {modalIsOpen && <Modal techIcon={techno} onClose={closeModal}  />}
-    </section>
+      </>
   );
 }

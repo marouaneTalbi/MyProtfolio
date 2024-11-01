@@ -12,8 +12,7 @@ export default function AboutMeSection() {
     const inView = useInView(ref, { once: true });
   
     return (
-        <section className="min-h-screen p-10  bg-cover bg-center backdrop-blur-lg">
-            <div className="min-h-screen  flex items-center justify-center p-10 bg-white bg-opacity-50 backdrop-blur-lg rounded-lg p-6s">
+            <div className=" flex items-center justify-center w-full">
                 <div className="flex-1">
                     <VerticalTimeline>
                         <VerticalTimelineElement
@@ -34,7 +33,7 @@ export default function AboutMeSection() {
                         </VerticalTimelineElement>
                     </VerticalTimeline>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 ">
                     <VerticalTimeline>
                         <VerticalTimelineElement
                             date="02/2024 - 09/2024"
@@ -75,7 +74,6 @@ export default function AboutMeSection() {
                     </VerticalTimeline>
                 </div>
             </div>
-        </section>
     );
   }
   

@@ -19,8 +19,14 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Orbitron', sans-serif; /* Utilise la police ici */
+  font-family: 'Orbitron', sans-serif; 
 }
+
+li {
+  color: var(--foreground);
+  font-family: 'Orbitron', sans-serif; 
+}
+
 
 
 @keyframes pulse {

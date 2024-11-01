@@ -9,11 +9,11 @@ export const Modal = ({ techIcon, onClose }) => {
             <div className="fixed inset-0 z-10 overflow-y-auto">
                 <div className="flex items-center justify-center h-full">
                     <motion.div
-                        className="relative transform overflow-hidden rounded-lg bg-white  bg-opacity-85 text-left shadow-xl transition-all"
-                        style={{
-                            width: 1500,
-                            height: 1000,
-                        }}
+                        className=" w-5/6 h-5/6 relative transform overflow-hidden rounded-lg bg-white  bg-opacity-85 text-left shadow-xl transition-all"
+                        // style={{
+                        //     width: 1500,
+                        //     height: 1000,
+                        // }}
                         initial={{ scale: 0.5 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 0.3 }}
