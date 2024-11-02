@@ -6,11 +6,11 @@ export const projects = [
       endDate: "Mars 2024",
       description: "Implémentation d'un système de notifications en temps réel pour améliorer l'interaction utilisateur. Intégration de l'IA via l'API ChatGPT.",
       techno:[
-        { name:'vuejs', type: 'web'},
+        { name:'vuedotjs', type: 'web'},
         { name:'typescript', type: 'web'},
         { name:'awslambda', type: 'devops'},
-        { name:'awscloudwatch', type: 'devops'},
-        { name:'awsdynamodb', type: 'bdd'},
+        { name:'amazoncloudwatch', type: 'devops'},
+        { name:'amazondynamodb', type: 'bdd'},
         { name:'jira', type: 'outil'},
         { name:'graphql', type: 'bdd'},
         { name:'gitlab', type: 'versioning'},
@@ -39,7 +39,7 @@ export const projects = [
       endDate: "Février 2024",
       description: "Développement d'une application mobile avec React Native. Utilisation de Docker pour la gestion des environnements.",
       techno:[
-        { name:'reactnaive', type: 'web'},
+        { name:'react', type: 'web'},
         { name:'typescript', type: 'web'},
         { name:'symfony', type: 'web'},
         { name:'Docker', type: 'devops'},
@@ -115,7 +115,7 @@ export const projects = [
         { name:'Docker', type: 'devops'},
         { name:'postman', type: 'outil'},
         { name:'jira', type: 'outil'},
-        { name:'postresql', type: 'bdd'},
+        { name:'postgresql', type: 'bdd'},
         { name:'gitlab', type: 'versioning'},
       ],
       taches:[

@@ -5,15 +5,10 @@ export const Modal = ({ techIcon, onClose }) => {
     return (
         <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
             <div className="fixed inset-0 bg-black bg-opacity-20 transition-opacity" aria-hidden="true"></div>
-
             <div className="fixed inset-0 z-10 overflow-y-auto">
                 <div className="flex items-center justify-center h-full">
                     <motion.div
                         className=" w-5/6 h-5/6 relative transform overflow-hidden rounded-lg bg-white  bg-opacity-85 text-left shadow-xl transition-all"
-                        // style={{
-                        //     width: 1500,
-                        //     height: 1000,
-                        // }}
                         initial={{ scale: 0.5 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 0.3 }}

@@ -3,7 +3,6 @@ import { useRef, useState } from "react";
 import {Modal} from "../components/Modal";
 import {Technos} from "../mock/technos"
 
-
 export default function SkillsSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -18,8 +17,6 @@ export default function SkillsSection() {
   const closeModal = () => {
     setModalIsOpen(false);
   };
-
-
 
   const technoObjects = Technos.map(techno => ({
     name: techno,
@@ -65,6 +62,17 @@ export default function SkillsSection() {
             ))}
           </div>
         </motion.div>
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: inView ? 1 : 0 }}
+          transition={{ duration: 2 }}
+          className="absolute bottom-0 right-0 p-5 w-1/5"
+        >
+          <img src={`/general/skills.svg`}  className="w-full" />
+
+        </motion.div>
+
       {modalIsOpen && <Modal techIcon={techno} onClose={closeModal}  />}
       </>
   );

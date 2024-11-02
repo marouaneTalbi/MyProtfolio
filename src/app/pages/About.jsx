@@ -12,28 +12,8 @@ export default function AboutMeSection() {
     const inView = useInView(ref, { once: true });
   
     return (
-            <div className=" flex items-center justify-center w-full">
-                <div className="flex-1">
-                    <VerticalTimeline>
-                        <VerticalTimelineElement
-                            date="2022 - 2024"
-                            iconStyle={{ background: '#fff', color: '#000' }}
-                            icon={<FontAwesomeIcon icon={faGraduationCap} className="h-6 w-6 text-blue-500" />}
-                        >
-                            <h3 className="text-lg font-bold">Mastère</h3>
-                            <p>INGÉNIERIE DU WEB</p>
-                        </VerticalTimelineElement>
-                        <VerticalTimelineElement
-                            date="2021 - 2022"
-                            iconStyle={{ background: '#fff', color: '#000' }}
-                            icon={<FontAwesomeIcon icon={faGraduationCap} className="h-6 w-6 text-blue-500" />}
-                        >
-                            <h3 className="text-lg font-bold">Bachelor</h3>
-                            <p>INGÉNIERIE DU WEB</p>
-                        </VerticalTimelineElement>
-                    </VerticalTimeline>
-                </div>
-                <div className="flex-1 ">
+            <div className=" flex items-center justify-center w-full h-full">
+                         <div className="flex-1 ">
                     <VerticalTimeline>
                         <VerticalTimelineElement
                             date="02/2024 - 09/2024"
@@ -73,6 +53,37 @@ export default function AboutMeSection() {
                         </VerticalTimelineElement>
                     </VerticalTimeline>
                 </div>
+                <div className="flex-1">
+                    <VerticalTimeline>
+                        <VerticalTimelineElement
+                            date="2022 - 2024"
+                            iconStyle={{ background: '#fff', color: '#000' }}
+                            icon={<FontAwesomeIcon icon={faGraduationCap} className="h-6 w-6 text-blue-500" />}
+                        >
+                            <h3 className="text-lg font-bold">Mastère</h3>
+                            <p>INGÉNIERIE DU WEB</p>
+                        </VerticalTimelineElement>
+                        <VerticalTimelineElement
+                            date="2021 - 2022"
+                            iconStyle={{ background: '#fff', color: '#000' }}
+                            icon={<FontAwesomeIcon icon={faGraduationCap} className="h-6 w-6 text-blue-500" />}
+                        >
+                            <h3 className="text-lg font-bold">Bachelor</h3>
+                            <p>INGÉNIERIE DU WEB</p>
+                        </VerticalTimelineElement>
+                    </VerticalTimeline>
+                </div>
+       
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity:  1  }}
+                transition={{ duration: 2 }}
+                className="absolute bottom-0 right-0 p-5 w-1/5"
+            >
+                    <img src={`/general/profil-details.svg`}  className="w-full" />
+
+
+            </motion.div>
             </div>
     );
   }
