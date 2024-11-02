@@ -51,7 +51,7 @@ export default function Welcom() {
               className="text-8xl font-bold text-white"
             >
                 <Typical
-                    steps={['M', 1000, 'Marouane TALBI', 500]}
+                    steps={['M', 500, 'Marouane TALBI', 500]}
                     loop={4}
                     wrapper="p"
                 />
@@ -94,43 +94,6 @@ export default function Welcom() {
 
       {
         hideBloc &&  
-        // <div className="w-full h-full flex  flex-wrap   ">
-        // {
-        //   sections.map((section) => 
-        //     (
-        //       <div className={getStyleOfDiv(section.style)}>
-        //         <div className="absolute bottom-0 left-0 p-5 m-5 " >
-        //           <h1 className="text-3xl text-white font-bold">{section.name}</h1>
-        //         </div> 
-        //         <div 
-        //           key={section.name}
-        //           ref={ref}
-        //           initial={{ opacity: 0 }}
-        //           animate={{ opacity: inView ? 1 : 0 }}
-        //           transition={{ duration: 0.5 }}
-        //           style={{
-        //             backgroundImage: `url(/general/${section.img})`,
-        //             backgroundPosition: 'center',
-        //             backgroundSize: 'contain',
-        //             backgroundRepeat: 'no-repeat',
-        //             height: '100%',
-        //             filter: 'blur(10px)',
-        //             transition: 'filter 0.1s ease',
-        //           }}
-        //           onClick={()=>navigation(section.route)}
-        //           onMouseEnter={(e) => {
-        //             e.currentTarget.style.filter = 'blur(0px)'; 
-        //           }}
-        //           onMouseLeave={(e) => {
-        //             e.currentTarget.style.filter = 'blur(10px)'; 
-        //           }}>
-
-        //         </div>
-        //       </div>
-        //     )
-        //   )
-        // }
-        // </div>
         <div className="grid grid-rows-2 grid-flow-col gap-0  w-full h-full">
         {
           sections.map((section) => 

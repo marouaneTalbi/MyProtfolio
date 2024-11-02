@@ -18,10 +18,12 @@ export default function SkillsSection() {
     setModalIsOpen(false);
   };
 
-  const technoObjects = Technos.map(techno => ({
-    name: techno,
-    duration: Math.floor(Math.random() * 10) + 1 
-  }));
+  const technoObjects = Technos.map(techno => (
+    {...techno, duration: Math.floor(Math.random() * 10) + 1}
+
+));
+
+  console.log(technoObjects)
   
   return (
     <>
@@ -37,21 +39,21 @@ export default function SkillsSection() {
               <motion.div 
                 key={item.name} 
                 className="m-2 ml-10 p-4 bg-white rounded-full shadow-lg flex items-center justify-center"
-                onClick={() => handleTechnoClick(item.name)}
+                onClick={() => handleTechnoClick(item)}
                 style={{
                   height: '130px',
                   width: '130px',
                 }}
-                animate={{ y: [0, -10, 0] }} // Animation de rebond
+                animate={{ y: [0, -10, 0] }} 
                 transition={{ 
-                  duration: 0.6 + item.duration * 0.2, // Durée d'animation qui augmente avec l'index
+                  duration: 0.6 + item.duration * 0.2, 
                   repeat: Infinity,
                   repeatType: "loop",
                   ease: "easeInOut"
                 }}
               >
                 <img 
-                  src={`./technos/${item.name}.svg`} 
+                  src={`./technos/${item.icon}.svg`} 
                   alt="Development Icon" 
                   style={{
                     height: 150,
@@ -73,7 +75,7 @@ export default function SkillsSection() {
 
         </motion.div>
 
-      {modalIsOpen && <Modal techIcon={techno} onClose={closeModal}  />}
+      {modalIsOpen && <Modal techno={techno} onClose={closeModal}  />}
       </>
   );
 }

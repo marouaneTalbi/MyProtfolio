@@ -46,7 +46,7 @@ export default function Index() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, x: -250 }}
               transition={{ duration: 1 }}
-              className="w-full flex items-center justify-center p-10 bg-white bg-opacity-50 backdrop-blur-lg rounded-lg" style={{ height: '110%' }}>
+              className="w-full flex items-center justify-center overflow-hidden p-10 bg-white bg-opacity-50 backdrop-blur-lg rounded-lg" style={{ height: '110%' }}>
       
               <Routes>
                 <Route path="/" element={<Welcom />} />
