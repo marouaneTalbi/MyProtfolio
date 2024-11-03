@@ -61,11 +61,8 @@ export default function ProjectPage({project, backToProjects}) {
                             <ul className="list-disc pl-5 mb-4 overflow-auto w-full">
                                 {project.techno.map((tech) => (
                                     <li key={tech.name} className="text-gray-700 text-xl font-bold">
-                                        <Typical
-                                            steps={['', 500, `${tech.name} (${tech.type})`, 500]}
-                                            loop={1}
-                                            wrapper="p"
-                                        />
+                                        {tech.name} ({tech.type})
+                                       
                                     </li>
                                 ))}
                             </ul>

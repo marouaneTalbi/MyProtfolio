@@ -22,7 +22,7 @@ export default function ProjectsSection() {
       <>
         {
          !currentProject && projects.map((project) => (
-            <div className="relative w-1/4 h-full m-1 p-10 rounded-lg border-8 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105">
+            <div className="relative w-1/4 h-full m-1 p-10 rounded-lg border-2 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105">
               <motion.div
                   key={project.name}
                   ref={ref}
@@ -57,15 +57,9 @@ export default function ProjectsSection() {
               </motion.div>
             </div>
           ))}
-
           {
             currentProject && <ProjectPage project={currentProject} backToProjects={backToProjects}/>
           }
-
-
-
-
-
       </>
     );
   }

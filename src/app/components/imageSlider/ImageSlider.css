@@ -1,0 +1,19 @@
+@keyframes slide-down {
+  0% {
+    transform: translateY(0%); /* Commence en haut */
+  }
+  0% {
+    transform: translateY(0); /* Entre dans la position visible */
+  }
+  0% {
+    transform: translateY(0); /* Reste visible */
+  }
+  0% {
+    transform: translateY(-80%); /* Retourne en haut pour le prochain cycle */
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 8s linear infinite; /* Ajustez la durée selon vos besoins */
+  display: flex; /* Assurez-vous que les images s'affichent sur une seule ligne */
+}

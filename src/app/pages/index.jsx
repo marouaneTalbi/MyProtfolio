@@ -18,6 +18,7 @@ export default function Index() {
 
   useEffect(() => {
     stShowSideBar(hideSideBar)
+    console.log(hideSideBar)
   }, [hideSideBar]);
 
   return (
@@ -33,7 +34,7 @@ export default function Index() {
             transition={{ duration: 0.5 }}
             className=" flex-1 bg-cover bg-center backdrop-blur-lg overflow-hidden h-screen flex items-center justify-center p-20">
               {
-                !showSideBar && 
+                showSideBar !== null && !showSideBar && 
                 <button  
                 onClick={() => setHideBar(true)} 
                 className="text-white hover:bg-blue-300 rounded px-4 py-2 mb-4 absolute top-5 left-0"

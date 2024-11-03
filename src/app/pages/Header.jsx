@@ -14,8 +14,6 @@ export default function Sidebar() {
         setIsVisible(false);
     };
 
-
-
     const sections = [
         { name: "HOME", route: "/" },
         { name: "ABOUT", route: "/about" },

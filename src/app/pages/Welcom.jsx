@@ -21,7 +21,7 @@ export default function Welcom() {
   };
 
   const getStyleOfDiv = (style) => {
-    const className = `relative ${style} m-1 p-5 rounded-lg border-8 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105`
+    const className = `relative ${style} m-1 p-5 rounded-lg border-2 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105`
     return className;
   }
 
