@@ -16,7 +16,7 @@ export default function Sidebar() {
 
     const sections = [
         { name: "HOME", route: "/" },
-        { name: "ABOUT", route: "/about" },
+        { name: "CAREER PATH", route: "/career" },
         { name: "SKILLS", route: "/skills" },
         { name: "PROJECTS", route: "/projects" },
         { name: "CONTACT", route: "/contact" },
@@ -42,7 +42,7 @@ export default function Sidebar() {
                 {sections.map((item) => (
                     <motion.li
                         key={item.name}
-                        className="neon text-4xl cursor-pointer text-white hover:text-blue-400 m-3"
+                        className="neon text-2xl cursor-pointer text-white hover:text-blue-400 m-3"
                         initial={{ scale: 1 }}
                         whileHover={{ scale: 1.2, rotate: 5 }}
                         transition={{ type: "spring", stiffness: 300 }}

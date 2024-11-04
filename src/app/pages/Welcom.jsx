@@ -32,7 +32,7 @@ export default function Welcom() {
   const sections = [
 
     {name:'PROJECTS', route:'/projects', img: 'projects.svg', style:'row-start-1 row-span-1'},
-    {name:'PARCOURS', route:'/about', img: 'teaching.svg', style:'row-start-2 row-span-1'},
+    {name:'PARCOURS', route:'/career', img: 'teaching.svg', style:'row-start-2 row-span-1'},
     {name:'SKILLS', route:'/skills', img: 'skills.svg', style:'row-start-1 row-span-1'},
     {name:'RESUM', route:'/resum', img: 'resum.svg', style:'row-start-2 row-span-1'},
     {name:'CONTACT', route:'/contact', img: 'contact.svg', style:'row-span-3'},
@@ -48,7 +48,7 @@ export default function Welcom() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="text-8xl font-bold text-white"
+              className="text-6xl font-bold text-white"
             >
                 <Typical
                     steps={['M', 500, 'Marouane TALBI', 500]}
@@ -60,7 +60,7 @@ export default function Welcom() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="text-5xl text-white"
+              className="text-3xl text-white"
             >
               Full Stack Developer
             </motion.h2>
@@ -68,15 +68,15 @@ export default function Welcom() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="text-2xl text-white mt-4 w-full "
+              className="text-xl text-white mt-4 w-full "
             >
             I'm Marouane Talbi, a passionate web developer with experience in 
               building dynamic applications using modern technologies like React, 
               Next.js, and more. I thrive on challenges and continuously seek to 
               improve my skills and knowledge in the tech industry.
             </motion.p>
-            <div className="flex items-center justify-center p-20 mt-20" >
-              <button onClick={hideWelcomPage} className="neon text-5xl border-2  border-blue-500 text-white bg-transparent rounded-lg px-6 py-5 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white w-full">
+            <div className="flex items-center justify-center p-10 mt-0" >
+              <button onClick={hideWelcomPage} className="neon text-3xl border-2  border-blue-500 text-white bg-transparent rounded-lg px-6 py-5 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white w-full">
                 START
               </button>
           </div>

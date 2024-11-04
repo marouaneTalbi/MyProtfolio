@@ -7,27 +7,33 @@ import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
 import { useRef } from "react";
 
-export default function AboutMeSection() {
+export default function CareerPath() {
     const ref = useRef(null);
     const inView = useInView(ref, { once: true });
   
     return (
-            <div className=" flex items-center justify-center w-full h-full">
-                         <div className="flex-1 ">
+            <div className=" flex items-center justify-center w-full h-full p-5">
+                <div className="flex-1 ">
                     <VerticalTimeline>
                         <VerticalTimelineElement
                             date="02/2024 - 09/2024"
                             iconStyle={{ background: '#fff', color: '#000' }}
                             icon={<FontAwesomeIcon icon={faBriefcase} className="h-6 w-6 text-blue-500" />}
+                            style={{height:150}}
                         >
-                            <h2 className="text-lg font-bold">Yomeva</h2>
-                            <h3 className="text-lg font-bold">Contrat en alternance</h3>
-                            <p>Développeur Full-stack</p>
+                            <div >
+                                <h2 className="text-lg font-bold">Yomeva</h2>
+                                <h3 className="text-lg font-bold">Contrat en alternance</h3>
+                                <p>Développeur Full-stack</p>
+                            </div>
+        
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
                             date="09/2022 - 02/2024"
                             iconStyle={{ background: '#fff', color: '#000' }}
                             icon={<FontAwesomeIcon icon={faBriefcase} className="h-6 w-6 text-blue-500" />}
+                            style={{height:150}}
+
                         >
                             <h2 className="text-lg font-bold">Foncia</h2>
                             <h3 className="text-lg font-bold">Contrat en alternance</h3>
@@ -37,6 +43,8 @@ export default function AboutMeSection() {
                             date="03/2022 - 09/2022"
                             iconStyle={{ background: '#fff', color: '#000' }}
                             icon={<FontAwesomeIcon icon={faBriefcase} className="h-6 w-6 text-blue-500" />}
+                            style={{height:150}}
+
                         >
                             <h2 className="text-lg font-bold">Thales</h2>
                             <h3 className="text-lg font-bold">Contrat en alternance</h3>
@@ -46,21 +54,25 @@ export default function AboutMeSection() {
                             date="09/2021 - 03/2022"
                             iconStyle={{ background: '#fff', color: '#000' }}
                             icon={<FontAwesomeIcon icon={faBriefcase} className="h-6 w-6 text-blue-500" />}
+                            style={{height:150}}
+
                         >
                             <h2 className="text-lg font-bold">Iviflo</h2>
                             <h3 className="text-lg font-bold">Contrat en alternance</h3>
                             <p>Développeur Full-stack</p>
                         </VerticalTimelineElement>
                     </VerticalTimeline>
+
+
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 ">
                     <VerticalTimeline>
                         <VerticalTimelineElement
                             date="2022 - 2024"
                             iconStyle={{ background: '#fff', color: '#000' }}
                             icon={<FontAwesomeIcon icon={faGraduationCap} className="h-6 w-6 text-blue-500" />}
                         >
-                            <h3 className="text-lg font-bold">Mastère</h3>
+                            <h3 className="text-lg font-bold">ESGI - Mastère</h3>
                             <p>INGÉNIERIE DU WEB</p>
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
@@ -68,7 +80,7 @@ export default function AboutMeSection() {
                             iconStyle={{ background: '#fff', color: '#000' }}
                             icon={<FontAwesomeIcon icon={faGraduationCap} className="h-6 w-6 text-blue-500" />}
                         >
-                            <h3 className="text-lg font-bold">Bachelor</h3>
+                            <h3 className="text-lg font-bold">ESGI - Bachelor</h3>
                             <p>INGÉNIERIE DU WEB</p>
                         </VerticalTimelineElement>
                     </VerticalTimeline>
@@ -80,7 +92,7 @@ export default function AboutMeSection() {
                 transition={{ duration: 2 }}
                 className="absolute bottom-0 right-0 p-5 w-1/5"
             >
-                    <img src={`/general/profil-details.svg`}  className="w-full" />
+                    <img src={`/general/teaching.svg`}  className="w-full" />
 
 
             </motion.div>

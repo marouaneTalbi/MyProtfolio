@@ -57,3 +57,16 @@ h1 {
       0 0 10px rgb(13, 0, 255),
       0 0 15px rgb(13, 0, 255);
 }
+
+::-webkit-scrollbar {
+  width: 4px; /* Largeur de la scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(13, 0, 255); /* Couleur du pouce de la scrollbar */
+  border-radius: 10px; /* Arrondi des coins */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Couleur de la piste */
+}

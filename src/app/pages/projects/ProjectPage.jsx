@@ -26,7 +26,7 @@ export default function ProjectPage({project, backToProjects}) {
             >
                 <div className="flex flex-col mb-4">
                     <h1 className="text-5xl font-bold text-white mb-4">{project.name}</h1>
-                    <h2 className="text-3xl font-semibold text-gray-800 mb-2">{project.company}</h2>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-2">{project.company}</h2>
                     <p className="text-gray-700 mb-4 text-xl font-bold">
                         <Typical
                             steps={['', 500, `${project.startDate} - ${project.endDate}`, 500]}
@@ -36,16 +36,16 @@ export default function ProjectPage({project, backToProjects}) {
                     </p>
                 </div>
 
-                <div className="flex flex-col mb-4">
-                    <h3 className="text-3xl font-semibold text-gray-800 mt-6">Description</h3>
-                    <p className="text-gray-600 mb-4 text-xl font-bold">{project.description}</p>
+                <div className="flex flex-col mb-0">
+                    <h3 className="text-2xl font-semibold text-gray-800 mt-6">Description</h3>
+                    <p className="text-gray-900 mb-4 text-l font-bold">{project.description}</p>
                 </div>
 
-                <div className="flex flex-col mb-4">
-                    <h3 className="font-semibold text-gray-800 text-3xl">Tâches réalisées</h3>
+                <div className="flex flex-col mb-4 h-5/6">
+                    <h3 className="font-semibold text-gray-800 text-2xl">Tâches réalisées</h3>
                     <ul className="list-disc pl-5 text-gray-700 overflow-y-auto" style={{ height: '100%' }}>
                         {project.taches.map((task, index) => (
-                            <li key={index} className="text-gray-700 mt-1 font-bold text-xl">
+                            <li key={index} className="text-gray-900 mt-1 font-bold ">
                                 {task.description}
                        
                                 
@@ -54,13 +54,13 @@ export default function ProjectPage({project, backToProjects}) {
                     </ul>
                 </div>
 
-                <div className="flex flex-row mb-4 ">
+                <div className="flex flex-row mb-4  ">
                     <div className="w-1/3">
                         <h3 className="text-3xl font-semibold text-gray-800 mt-6">Technologies</h3>
                         <div className="flex flex-wrap">
                             <ul className="list-disc pl-5 mb-4 overflow-auto w-full">
                                 {project.techno.map((tech) => (
-                                    <li key={tech.name} className="text-gray-700 text-xl font-bold">
+                                    <li key={tech.name} className="text-gray-700 font-bold">
                                         {tech.name} ({tech.type})
                                        
                                     </li>
@@ -69,10 +69,10 @@ export default function ProjectPage({project, backToProjects}) {
                         </div>
                     </div>
 
-                    <motion.div className=" w-full flex flex-wrap h-min p-2 ">
+                    <motion.div className=" w-full flex flex-wrap h-min p-0 ml-10 mt-10">
                         {project.techno.map((tech, index) => (
                             <motion.div 
-                                className=" m-2 ml-10 p-4 bg-white rounded-full shadow-lg flex  items-center justify-center"
+                                className=" m-2 mt-5 p-2 bg-white rounded-full shadow-lg flex  items-center justify-center"
                                 animate={{ y: [0, -10, 0] }} 
                                 transition={{ 
                                 duration: 0.6 + index * 0.2,
@@ -85,8 +85,8 @@ export default function ProjectPage({project, backToProjects}) {
                                 src={`./technos/${tech.name}.svg`} 
                                 alt="Development Icon" 
                                 style={{
-                                height: '60px',
-                                width: '60px',
+                                height: '40px',
+                                width: '40px',
                                 }}
                             />
                             </motion.div>

@@ -5,8 +5,10 @@ import Welcom from "./Welcom";
 import Header from "./Header";
 import SkillsSection from "./Skills";
 import ProjectsSection from "./Projects";
-import AboutMeSection from "./About";
+import CareerPath from "./CareerPath";
 import Resum from "./Resum";
+import Contact from "./Contact";
+
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { ArrowRightCircleIcon } from '@heroicons/react/24/solid'
 import { SidebarProvider, useSidebar } from "../context/sideBarContext";
@@ -32,14 +34,14 @@ export default function Index() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, x: -250 }}
             transition={{ duration: 0.5 }}
-            className=" flex-1 bg-cover bg-center backdrop-blur-lg overflow-hidden h-screen flex items-center justify-center p-20">
+            className=" flex-1 bg-cover bg-center backdrop-blur-lg overflow-hidden h-screen flex items-center justify-center p-20 ">
               {
                 showSideBar !== null && !showSideBar && 
                 <button  
                 onClick={() => setHideBar(true)} 
-                className="text-white hover:bg-blue-300 rounded px-4 py-2 mb-4 absolute top-5 left-0"
+                className="text-white hover:bg-blue-300 rounded px-1 py-0 mb-4 absolute top-5 left-0"
               >
-                <ArrowRightCircleIcon className="size-10 text-white-500" />
+                <ArrowRightCircleIcon className="size-8 text-white-500" />
               </button>
               }
             <motion.div 
@@ -53,8 +55,10 @@ export default function Index() {
                 <Route path="/" element={<Welcom />} />
                 <Route path="/skills" element={<SkillsSection />} />
                 <Route path="/projects" element={<ProjectsSection />} />
-                <Route path="/about" element={<AboutMeSection />} />
+                <Route path="/career" element={<CareerPath />} />
                 <Route path="/resum" element={<Resum />} />
+                <Route path="/contact" element={<Contact />} />
+
               </Routes>
             </motion.div>
           </motion.div>

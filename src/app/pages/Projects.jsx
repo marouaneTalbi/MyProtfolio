@@ -46,14 +46,14 @@ export default function ProjectsSection() {
                     e.currentTarget.style.filter = 'blur(10px)'; 
                   }}
                 >
-                  <div className="absolute bottom-0 left-0 right-0 p-2 m-5 bg-white bg-opacity-80 rounded-lg">
+                  {/* <div className="absolute bottom-0 left-0 right-0 p-2 m-5 bg-white bg-opacity-80 rounded-lg">
                     <h2 className="text-xl font-bold">{project.name}</h2>
                     <h3 className="text-md italic">{project.company}</h3>
                     <p>{project.description}</p>
                     <p className="text-sm text-gray-500">
                       {project.startDate} - {project.endDate}
                     </p>
-                  </div>
+                  </div> */}
               </motion.div>
             </div>
           ))}
