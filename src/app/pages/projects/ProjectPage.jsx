@@ -22,12 +22,12 @@ export default function ProjectPage({project, backToProjects}) {
                 initial={{ opacity: 0, y: -20 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.5 }}
-                className="rounded-lg p-5 w-full h-full grid grid-cols-1 md:grid-cols-2 gap-4"
+                className="rounded-lg lg:p-5 lg:w-full lg:h-full lg:grid lg:grid-cols-1 lg:grid-cols-2 lg:gap-4 p-5 w-full h-full "
             >
                 <div className="flex flex-col mb-4">
-                    <h1 className="text-5xl font-bold text-white mb-4">{project.name}</h1>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-2">{project.company}</h2>
-                    <p className="text-gray-700 mb-4 text-xl font-bold">
+                    <h1 className="lg:text-5xl text-xl font-bold text-white mb-4">{project.name}</h1>
+                    <h2 className="lg:text-2xl text-lg font-semibold text-gray-800 mb-2">{project.company}</h2>
+                    <p className="text-gray-700 mb-4 lg:text-xl font-bold">
                         <Typical
                             steps={['', 500, `${project.startDate} - ${project.endDate}`, 500]}
                             loop={1}

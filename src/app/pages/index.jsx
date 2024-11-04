@@ -34,7 +34,8 @@ export default function Index() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, x: -250 }}
             transition={{ duration: 0.5 }}
-            className=" flex-1 bg-cover bg-center backdrop-blur-lg overflow-hidden h-screen flex items-center justify-center p-20 ">
+            // className=" flex-1 bg-cover bg-center backdrop-blur-lg overflow-hidden h-screen flex items-center justify-center  sm:p-6 md:p-8 p-20">
+              className="responsive-padding flex-1 bg-cover bg-center backdrop-blur-lg overflow-hidden flex items-center justify-center h-screen" >
               {
                 showSideBar !== null && !showSideBar && 
                 <button  

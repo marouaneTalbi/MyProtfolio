@@ -9,26 +9,26 @@ export default function Contact() {
     return (
         <>
 
-        <div className="flex flex-col w-full h-full">
+        <div className="flex flex-col justify-around lg:justify-normal w-full h-full lg:flex lg:flex-col lg:w-full lg:h-full ">
 
-            <h1 className="text-4xl font-bold text-center mb-8">Contact</h1>
+            <h1 className="text-4xl font-bold text-center text-white mb-0 lg:mb-8 ">Contact</h1>
 
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2 }}
-                className="flex flex-col items-left  justify-left bg-blue-50 rounded-lg shadow-lg p-10  mx-auto w-full"
+                className="flex flex-col items-left  justify-left  rounded-lg shadow-lg p-10  mx-auto w-full"
             >
-                <p className="text-xl mb-2">📧 Email: {email}</p>
-                <p className="text-xl mb-2">📞 Phone: {phone}</p>
-                <p className="text-xl mb-2">Adresse: Corbeil-Essonnes, France 91100</p>
+                <p className="lg:text-xl lg:mb-2">📧 Email: {email}</p>
+                <p className="lg:text-xl lg:mb-2">📞 Phone: {phone}</p>
+                <p className="lg:text-xl lg:mb-2">Adresse: Corbeil-Essonnes, France 91100</p>
                 
-                    <p className="text-xl">
+                    <p className="lg:text-xl text-xs lg:mb-2">
                         GitHub: <a href={github} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 mr-4">
                         https://github.com/marouaneTalbi
                         </a>
                     </p>
-                    <p className="text-xl">
+                    <p className="lg:text-xl text-xs lg:mb-2">
                         LinkedIn: <a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         https://www.linkedin.com/in/marouane-talbi-935776209/</a>
                     </p>
@@ -42,7 +42,7 @@ export default function Contact() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2 }}
-                className="absolute bottom-0 right-0 p-5 w-1/5"
+                className="absolute bottom-10 right-0 p-2 w-2/5 lg:bottom-0 lg:right-0 lg:p-5 lg:w-1/5"
             >
                 <img src={`/general/contact.svg`} className="w-full" />
             </motion.div>

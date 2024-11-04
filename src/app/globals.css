@@ -18,6 +18,25 @@
 }
 
 
+.responsive-padding {
+  padding: 0rem; /* Valeur par défaut pour les petits écrans */
+}
+
+@media (min-width: 640px) { 
+  .responsive-padding {
+      padding: 5.5rem;
+  }
+}
+
+@media (min-width: 768px) { /* Pour les écrans de 768px et plus */
+  .responsive-padding {
+      padding: 4rem;
+  }
+}
+
+
+
+
 body {
   color: var(--foreground);
   background: var(--background);

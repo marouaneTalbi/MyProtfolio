@@ -20,22 +20,25 @@ export default function ProjectsSection() {
   
     return (
       <>
-        {
+
+      <div className="w-full h-full flex lg:flex-row flex-col  p-2">
+      {
          !currentProject && projects.map((project) => (
-            <div className="relative w-1/4 h-full m-1 p-10 rounded-lg border-2 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105">
+            <div className="relative lg:w-1/4 h-full m-1 p-5 lg:p-10 rounded-lg border-2 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105 ">
               <motion.div
                   key={project.name}
                   ref={ref}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: inView ? 1 : 0 }}
                   transition={{ duration: 1 }}
+                  className="lg:blur-lg"
+
                   style={{
                     backgroundImage: `url(/projects/${project.img})`,
                     backgroundPosition: 'center',
                     backgroundSize: 'contain',
                     backgroundRepeat: 'no-repeat',
                     height:'100%',
-                    filter: 'blur(10px)',
                     transition: 'filter 0.1s ease',
                   }}
                   onClick={()=>getProject(project)}
@@ -43,6 +46,7 @@ export default function ProjectsSection() {
                     e.currentTarget.style.filter = 'blur(0px)'; 
                   }}
                   onMouseLeave={(e) => {
+                    console.log(window.innerWidth)
                     e.currentTarget.style.filter = 'blur(10px)'; 
                   }}
                 >
@@ -57,6 +61,9 @@ export default function ProjectsSection() {
               </motion.div>
             </div>
           ))}
+
+      </div>
+
           {
             currentProject && <ProjectPage project={currentProject} backToProjects={backToProjects}/>
           }

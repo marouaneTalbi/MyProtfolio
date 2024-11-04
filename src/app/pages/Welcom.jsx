@@ -31,11 +31,11 @@ export default function Welcom() {
 
   const sections = [
 
-    {name:'PROJECTS', route:'/projects', img: 'projects.svg', style:'row-start-1 row-span-1'},
-    {name:'PARCOURS', route:'/career', img: 'teaching.svg', style:'row-start-2 row-span-1'},
-    {name:'SKILLS', route:'/skills', img: 'skills.svg', style:'row-start-1 row-span-1'},
-    {name:'RESUM', route:'/resum', img: 'resum.svg', style:'row-start-2 row-span-1'},
-    {name:'CONTACT', route:'/contact', img: 'contact.svg', style:'row-span-3'},
+    {name:'PROJECTS', route:'/projects', img: 'projects.svg', style:'lg:row-start-1 lg:row-span-1 h-1/5 lg:h-96'},
+    {name:'PARCOURS', route:'/career', img: 'teaching.svg', style:'lg:row-start-2 lg:row-span-1 h-1/5 lg:h-96'},
+    {name:'SKILLS', route:'/skills', img: 'skills.svg', style:'lg:row-start-1 lg:row-span-1 h-1/5 lg:h-96'},
+    {name:'RESUM', route:'/resum', img: 'resum.svg', style:'lg:row-start-2 lg:row-span-1 h-1/5 lg:h-96'},
+    {name:'CONTACT', route:'/contact', img: 'contact.svg', style:'lg:row-span-3 h-1/5 lg:h-full'},
   ]
 
   return (
@@ -43,24 +43,24 @@ export default function Welcom() {
     <>
       {
           !hideBloc && 
-          <div className="flex flex-col w-1/2 w-4/6">
+          <div className="flex flex-col lg:w-4/6 w-full   mx-auto p-0 lg:p-4  ">
             <motion.h1
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="text-6xl font-bold text-white"
+              className="text-4xl lg:text-6xl font-bold text-white text-center"
             >
-                <Typical
-                    steps={['M', 500, 'Marouane TALBI', 500]}
-                    loop={4}
-                    wrapper="p"
-                />
+              <Typical
+                steps={['M', 500, 'Marouane TALBI', 500]}
+                loop={4}
+                wrapper="p"
+              />
             </motion.h1>
             <motion.h2
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="text-3xl text-white"
+              className="text-2xl lg:text-4xl text-white text-center"
             >
               Full Stack Developer
             </motion.h2>
@@ -68,39 +68,39 @@ export default function Welcom() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="text-xl text-white mt-4 w-full "
+              className="text-lg sm:text-xl text-white mt-4 text-left"
             >
-            I'm Marouane Talbi, a passionate web developer with experience in 
-              building dynamic applications using modern technologies like React, 
-              Next.js, and more. I thrive on challenges and continuously seek to 
+              I'm Marouane Talbi, a passionate web developer with experience in
+              building dynamic applications using modern technologies like React,
+              Next.js, and more. I thrive on challenges and continuously seek to
               improve my skills and knowledge in the tech industry.
             </motion.p>
-            <div className="flex items-center justify-center p-10 mt-0" >
-              <button onClick={hideWelcomPage} className="neon text-3xl border-2  border-blue-500 text-white bg-transparent rounded-lg px-6 py-5 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white w-full">
+            <div className="flex items-center justify-center p-4 mt-4">
+              <button onClick={hideWelcomPage} className="neon text-2xl sm:text-3xl border-2 border-blue-500 text-white bg-transparent rounded-lg px-6 py-3 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white w-full">
                 START
               </button>
-          </div>
-          <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity:  1  }}
-                transition={{ duration: 2 }}
-                className="absolute bottom-0 right-0 p-5 w-2/6"
+            </div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 2 }}
+              className="absolute bottom-0 right-0 p-0 w-3/4 lg:w-1/4"
             >
-                    <img src={`/general/code.svg`}  className="w-full" />
-
+              <img src={`/general/code.svg`} className="w-full" />
             </motion.div>
           </div>
+
       }
 
       {
         hideBloc &&  
-        <div className="grid grid-rows-2 grid-flow-col gap-0  w-full h-full">
+        <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-0  lg:w-full lg:h-full w-full h-full flex flex-col lg:p-0 p-2 ">
         {
           sections.map((section) => 
             (
               <div className={getStyleOfDiv(section.style)}>
-                <div className="absolute bottom-0 left-0 p-5 m-5 " >
-                  <h1 className="text-3xl text-white font-bold">{section.name}</h1>
+                <div className="absolute lg:bottom-0 lg:left-0 lg:p-5 lg:m-5 bottom-0 left-0 p-5 m-0 " >
+                  <h1 className="lg:text-3xl text-white font-bold">{section.name}</h1>
                 </div> 
                 <div 
                   key={section.name}
