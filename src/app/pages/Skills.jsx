@@ -54,18 +54,18 @@ export default function SkillsSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0 }}
         transition={{ duration: 2 }}
-        className="p-10 rounded"
+        className="p-0 rounded  h-4/5"
         >
-        <div className="flex flex-wrap justify-left mt-4 p-1 ">
+        <div className="flex flex-wrap justify-left lg-mt-4 lg:p-1  h-full">
           {allTechnos && allTechnos.map((item, index) => (
             <motion.div 
               key={item.name} 
-              className="m-2 ml-10 p-4 bg-white rounded-full shadow-lg flex items-center justify-center"
+              className="lg:m-2 lg:ml-10 m-2 p-4 bg-white rounded-full shadow-lg flex items-center justify-center lg:h-[130px] lg:w-[130px] h-[80px] w-[80px] "
               onClick={() => handleTechnoClick(item)}
-              style={{
-                height: '130px',
-                width: '130px',
-              }}
+              // style={{
+              //   height: '130px',
+              //   width: '130px',
+              // }}
               animate={{ y: [0, -10, 0] }} 
               transition={{ 
                 duration: 0.6 + item.duration * 0.2, 
@@ -86,7 +86,7 @@ export default function SkillsSection() {
           ))}
         </div>
         </motion.div>:
-        <div className="grid grid-rows-2 grid-flow-col gap-1  w-full h-full g-red-500">
+        <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-1 flex flex-col  w-full h-full g-red-500">
           {
             TechnosTypes.map((techno) =>(
                 <div 

@@ -12,7 +12,7 @@ export default function CareerPath() {
     const inView = useInView(ref, { once: true });
   
     return (
-            <div className=" flex items-center justify-center w-full h-full p-5">
+            <div className="flex lg:items-center lg:justify-center w-full h-full p-5 flex-col overflow-auto">
                 <div className="flex-1 ">
                     <VerticalTimeline>
                         <VerticalTimelineElement
@@ -65,7 +65,7 @@ export default function CareerPath() {
 
 
                 </div>
-                <div className="flex-1 ">
+                <div className="flex-1 lg:mt-10 mt-10">
                     <VerticalTimeline>
                         <VerticalTimelineElement
                             date="2022 - 2024"
@@ -90,7 +90,7 @@ export default function CareerPath() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity:  1  }}
                 transition={{ duration: 2 }}
-                className="absolute bottom-0 right-0 p-5 w-1/5"
+                className="absolute bottom-0 right-0 p-5 lg:w-1/5 w-2/5"
             >
                     <img src={`/general/teaching.svg`}  className="w-full" />
 

@@ -35,7 +35,7 @@ export default function Index() {
             exit={{ opacity: 0, x: -250 }}
             transition={{ duration: 0.5 }}
             // className=" flex-1 bg-cover bg-center backdrop-blur-lg overflow-hidden h-screen flex items-center justify-center  sm:p-6 md:p-8 p-20">
-              className="responsive-padding flex-1 bg-cover bg-center backdrop-blur-lg overflow-hidden flex items-center justify-center h-screen" >
+              className=" flex-1 bg-cover bg-center backdrop-blur-lg overflow-hidden flex items-center justify-center h-screen lg:p-20 lg:py:0 py-10" >
               {
                 showSideBar !== null && !showSideBar && 
                 <button  
@@ -50,7 +50,7 @@ export default function Index() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, x: -250 }}
               transition={{ duration: 1 }}
-              className="w-full flex items-center justify-center overflow-hidden p-10 bg-white bg-opacity-50 backdrop-blur-lg rounded-lg" style={{ height: '110%' }}>
+              className="w-full flex items-center justify-center overflow-hidden lg:p-10  bg-white bg-opacity-50 backdrop-blur-lg rounded-lg" style={{ height: '110%' }}>
       
               <Routes>
                 <Route path="/" element={<Welcom />} />

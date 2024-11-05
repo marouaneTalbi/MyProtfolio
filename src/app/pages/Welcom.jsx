@@ -43,7 +43,7 @@ export default function Welcom() {
     <>
       {
           !hideBloc && 
-          <div className="flex flex-col lg:w-4/6 w-full   mx-auto p-0 lg:p-4  ">
+          <div className="flex flex-col lg:w-4/6 w-full   mx-auto p-0 lg:p-4 p-4  ">
             <motion.h1
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -94,7 +94,7 @@ export default function Welcom() {
 
       {
         hideBloc &&  
-        <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-0  lg:w-full lg:h-full w-full h-full flex flex-col lg:p-0 p-2 ">
+        <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-0 lg:w-full lg:h-full w-full h-full flex flex-col h-auto    ">
         {
           sections.map((section) => 
             (
