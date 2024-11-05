@@ -6,6 +6,7 @@ import Typical from 'react-typical'
 import { useNavigate } from 'react-router-dom';
 import { div, use } from "framer-motion/m";
 import useHideSideBar, { useSidebar } from "../context/sideBarContext"
+import { sections } from "../mock/technosImg";
 
 export default function Welcom() {
 
@@ -29,13 +30,6 @@ export default function Welcom() {
     setHideBloc(true)
   }
 
-  const sections = [
-    {name:'PROJECTS', route:'/projects', img: 'projects.svg', style:'lg:row-start-1 lg:row-span-1 h-1/5 lg:h-96'},
-    {name:'PARCOURS', route:'/career', img: 'teaching.svg', style:'lg:row-start-2 lg:row-span-1 h-1/5 lg:h-96  mt-0 lg:mt-4 '},
-    {name:'SKILLS', route:'/skills', img: 'skills.svg', style:'lg:row-start-1 lg:row-span-1 h-1/5 lg:h-96'},
-    {name:'RESUM', route:'/resum', img: 'resum.svg', style:'lg:row-start-2 lg:row-span-1 h-1/5 lg:h-96 mt-0 lg:mt-4'},
-    {name:'CONTACT', route:'/contact', img: 'contact.svg', style:'lg:row-span-3 h-1/5 lg:h-full'},
-  ]
 
   return (
     <>
@@ -90,7 +84,7 @@ export default function Welcom() {
       }
       {
         hideBloc &&  
-        <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-0 lg:w-full lg:h-full w-full h-full flex flex-col h-auto lg:py-0  py-6 ">
+        <div className="lg:grid lg:grid-rows-2 lg:gap-y-1 lg:grid-flow-col lg:gap-0 lg:w-full lg:h-full w-full h-full flex flex-col h-auto lg:py-0  py-6 ">
         {
           sections.map((section) => 
             (

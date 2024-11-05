@@ -52,4 +52,13 @@ export const TechImages = {
     {name:'Cloud', type:'cloud', style:'row-start-2 row-span-1'},
     {name:'Outil', type:'outil', style:'row-start-1 row-span-1'},
     {name:'Bdd', type:'db', style:'row-start-2 row-span-1'},
+  ];
+
+  export const sections = [
+    {name:'PROJECTS', route:'/projects', img: 'projects.svg', style:'lg:row-start-1 lg:row-span-1 h-1/5 lg:h-full'},
+    {name:'PARCOURS', route:'/career', img: 'teaching.svg', style:'lg:row-start-2 lg:row-span-1  h-1/5 lg:h-full'},
+    {name:'SKILLS', route:'/skills', img: 'skills.svg', style:'lg:row-start-1 lg:row-span-1 h-1/5 lg:h-full'},
+    {name:'RESUM', route:'/resum', img: 'resum.svg', style:'lg:row-start-2 lg:row-span-1 h-1/5 lg:h-full'},
+    {name:'CONTACT', route:'/contact', img: 'contact.svg', style:'lg:row-span-3 h-1/5 lg:h-full'},
   ]
+

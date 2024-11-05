@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import { SidebarProvider, useSidebar } from "../context/sideBarContext";
 import { useEffect, useState } from "react";
+import { AnimatedBackground } from 'animated-backgrounds';
 
 export default function Index() {
   const { hideSideBar, setHideBar } = useSidebar();
@@ -23,7 +24,12 @@ export default function Index() {
 
   return (
       <Router>
-        <div className="relative min-h-screen bg-[url('/img.jpg')] bg-cover bg-fixed bg-center flex w-full bg-cover bg-center backdrop-blur-lg">
+        <div 
+        className="relative min-h-screen bg-[url('/img.jpg')] bg-cover bg-fixed bg-center flex w-full bg-cover bg-center backdrop-blur-lg"
+
+        
+        >
+        {/* <AnimatedBackground animationName="particleNetwork" /> */}
 
           <div className="flex-none w-15">
             {showSideBar && <Header />}

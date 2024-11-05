@@ -79,7 +79,7 @@ export default function SkillsSection() {
           ))}
         </div>
         </motion.div>:
-        <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-1 flex flex-col  w-full h-full g-red-500 lg:py-4 py-4">
+        <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-1 flex flex-col  w-full h-full  lg:py-4 py-4">
           {
             TechnosTypes.map((techno) =>(
                 <div 
@@ -114,17 +114,6 @@ export default function SkillsSection() {
       }
 
       {modalIsOpen && <Modal techno={techno} onClose={closeModal}  />}
-     
-
-        {/* <motion.div
-          ref={ref}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: inView ? 1 : 0 }}
-          transition={{ duration: 2 }}
-          className="absolute bottom-0 right-0 p-5 w-1/5"
-        >
-          <img src={`/general/skills.svg`}  className="w-full" />
-        </motion.div> */}
       </>
   );
 }
