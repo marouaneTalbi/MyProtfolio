@@ -58,7 +58,7 @@ export const TechImages = {
     {name:'PROJECTS', route:'/projects', img: 'projects.svg', style:'lg:row-start-1 lg:row-span-1 h-1/5 lg:h-full'},
     {name:'PARCOURS', route:'/career', img: 'teaching.svg', style:'lg:row-start-2 lg:row-span-1  h-1/5 lg:h-full'},
     {name:'SKILLS', route:'/skills', img: 'skills.svg', style:'lg:row-start-1 lg:row-span-1 h-1/5 lg:h-full'},
-    {name:'RESUM', route:'/resum', img: 'resum.svg', style:'lg:row-start-2 lg:row-span-1 h-1/5 lg:h-full'},
+    {name:'CV', route:'/resum', img: 'resum.svg', style:'lg:row-start-2 lg:row-span-1 h-1/5 lg:h-full'},
     {name:'CONTACT', route:'/contact', img: 'contact.svg', style:'lg:row-span-3 h-1/5 lg:h-full'},
   ]
 

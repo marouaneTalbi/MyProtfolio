@@ -1,5 +1,5 @@
 import React from 'react';
-import './ImageSlider.css'; // Assurez-vous de créer ce fichier CSS
+import './ImageSlider.css';
 
 const ImageSlider = ({ images }) => {
   return (

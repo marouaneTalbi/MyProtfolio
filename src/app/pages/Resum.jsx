@@ -1,11 +1,10 @@
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import DownloadButton from "../components/DownloadButton";
 
 export default function Resum() {
   
     return (
         <>
-                {/* <h1>Resum</h1> */}
             <div className="absolute lg:bottom-10 lg:left-8 bottom-20 ">
                 <DownloadButton />
             </div>

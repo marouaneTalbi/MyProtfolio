@@ -1,12 +1,11 @@
+"use client";
+
 import { ArrowLeftCircleIcon } from "@heroicons/react/24/solid";
-import { useNavigate } from "react-router-dom";
-import { motion, useInView } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
 import Typical from 'react-typical'
 
-
 export default function ProjectPage({project, backToProjects}) {
-
     return (
         <>
             {
@@ -65,6 +64,7 @@ export default function ProjectPage({project, backToProjects}) {
                     <motion.div className=" w-full flex flex-wrap h-min lg:ml-10 lg:mt-10 lg:p-0 p-5 ">
                         {project.techno.map((tech, index) => (
                             <motion.div 
+                                key={tech.name}
                                 className=" m-2 mt-5 p-2 bg-white rounded-full shadow-lg flex  items-center justify-center"
                                 animate={{ y: [0, -10, 0] }} 
                                 transition={{ 

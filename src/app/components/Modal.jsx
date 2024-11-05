@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { XIcon } from '@heroicons/react/solid';
 import CompanyProjectCard from "./CompanyProjectCard"
 
 export const Modal = ({ techno, onClose }) => {

@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
 import { useSidebar } from "../context/sideBarContext";
 import { ArrowLeftCircleIcon } from '@heroicons/react/24/solid'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 
 export default function Sidebar() {
-    const { hideSideBar, setHideBar } = useSidebar();
+    const {setHideBar } = useSidebar();
     const [isVisible, setIsVisible] = useState(true);
     const navigate = useNavigate();
-    const isMobile = useMediaQuery({ maxWidth: 768 });
+    // const isMobile = useMediaQuery({ maxWidth: 768 });
 
     const navigation = (route) => {
 
-        if(isMobile){
-            handleClose();
-        }
+        // if(isMobile){
+        //     handleClose();
+        // }
         navigate(route);
     }
 
@@ -30,14 +30,18 @@ export default function Sidebar() {
         { name: "SKILLS", route: "/skills" },
         { name: "PROJECTS", route: "/projects" },
         { name: "CONTACT", route: "/contact" },
-        { name: "RESUM", route: "/resum" },
+        { name: "CV", route: "/resum" },
     ];
 
     return (
         <motion.div 
-            initial={{ opacity: 0, x: isMobile ? 250 : 0 }} 
-            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: isMobile ? 250 : 0 }} 
-            exit={{ opacity: 0, x: isMobile ? 250 : 0 }}
+            // initial={{ opacity: 0, x: isMobile ? 250 : 0 }} 
+            // animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: isMobile ? 250 : 0 }} 
+            // exit={{ opacity: 0, x: isMobile ? 250 : 0 }}
+            // transition={{ duration: 0.5 }} 
+            initial={{ opacity: 0, x:  -250 }} 
+            animate={{ opacity: 1, x: 0 } } 
+            exit={{ opacity: 0, x:  -250  }}
             transition={{ duration: 0.5 }} 
             className="bg-gray-900 p-4 h-screen lg:static absolute right-0 z-50"
         >

@@ -3,7 +3,6 @@ import { useRef, useState } from "react";
 import ProjectPage from "./projects/ProjectPage"
 import {projects} from "../mock/projects"
 
-
 export default function ProjectsSection() {
     const ref = useRef(null);
     const inView = useInView(ref, { once: true });
@@ -23,10 +22,12 @@ export default function ProjectsSection() {
           !currentProject && 
           <div className="w-full h-full flex lg:flex-row flex-col  py-12 lg:p-2 lg:py-0">
             {  
-              projects.map((project) => (
-                <div className="relative lg:w-1/4 h-full m-1 p-10 lg:p-10 rounded-lg border-2 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105 ">
+              projects.map((project, index) => (
+                <div 
+                key={index}
+                className="relative lg:w-1/4 h-full m-1 p-10 lg:p-10 rounded-lg border-2 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105 ">
                   <motion.div
-                      key={project.name}
+                      key={index}
                       ref={ref}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: inView ? 1 : 0 }}

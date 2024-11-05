@@ -1,11 +1,10 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Typical from 'react-typical'
 import { useNavigate } from 'react-router-dom';
-import { div, use } from "framer-motion/m";
-import useHideSideBar, { useSidebar } from "../context/sideBarContext"
+import { useSidebar } from "../context/sideBarContext"
 import { sections } from "../mock/technosImg";
 
 export default function Welcom() {
@@ -29,6 +28,11 @@ export default function Welcom() {
   const hideWelcomPage = () => {
     setHideBloc(true)
   }
+
+  const presentation = `Développeur Full Stack passionné, je crée des solutions web
+  dynamiques avec React, Symfony et AWS. Toujours à la recherche de 
+  nouveaux défis, je m'engage à offrir une expérience utilisateur de 
+  qualité tout en optimisant les performances des applications.`
 
 
   return (
@@ -62,10 +66,9 @@ export default function Welcom() {
               transition={{ duration: 1, delay: 0.4 }}
               className="text-lg sm:text-xl text-white mt-4 text-left"
             >
-              I'm Marouane Talbi, a passionate web developer with experience in
-              building dynamic applications using modern technologies like React,
-              Next.js, and more. I thrive on challenges and continuously seek to
-              improve my skills and knowledge in the tech industry.
+
+              {presentation}
+     
             </motion.p>
             <div className="flex items-center justify-center p-4 mt-4">
               <button onClick={hideWelcomPage} className="neon text-2xl sm:text-3xl border-2 border-blue-500 text-white bg-transparent rounded-lg px-6 py-3 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white w-full">
@@ -86,14 +89,15 @@ export default function Welcom() {
         hideBloc &&  
         <div className="lg:grid lg:grid-rows-2 lg:gap-y-1 lg:grid-flow-col lg:gap-0 lg:w-full lg:h-full w-full h-full flex flex-col h-auto lg:py-0  py-6 ">
         {
-          sections.map((section) => 
+          sections.map((section, index) => 
             (
-              <div className={getStyleOfDiv(section.style)}>
+                  
+                  <div className={getStyleOfDiv(section.style)} key={index}>
                 <div className="absolute lg:bottom-0 lg:left-0 lg:p-5 lg:m-5 bottom-0 left-0 p-5 m-0 " >
                   <h1 className="lg:text-3xl text-white font-bold">{section.name}</h1>
                 </div> 
                 <div 
-                  key={section.name}
+                  key={index}
                   ref={ref}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: inView ? 1 : 0 }}

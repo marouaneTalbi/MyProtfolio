@@ -8,11 +8,11 @@ import ProjectsSection from "./Projects";
 import CareerPath from "./CareerPath";
 import Resum from "./Resum";
 import Contact from "./Contact";
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Bars3Icon } from '@heroicons/react/24/solid'
-import { SidebarProvider, useSidebar } from "../context/sideBarContext";
+import { useSidebar } from "../context/sideBarContext";
 import { useEffect, useState } from "react";
-import { AnimatedBackground } from 'animated-backgrounds';
+// import { AnimatedBackground } from 'animated-backgrounds';
 
 export default function Index() {
   const { hideSideBar, setHideBar } = useSidebar();

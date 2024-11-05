@@ -1,15 +1,10 @@
-import { motion, useInView } from "framer-motion";
-import Iphone from "../components/Phone";
+import { motion } from "framer-motion";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import '../../../node_modules/react-vertical-timeline-component/style.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
-import { useRef } from "react";
-
 export default function CareerPath() {
-    const ref = useRef(null);
-    const inView = useInView(ref, { once: true });
   
     return (
             <div className="flex lg:items-center lg:justify-center w-full h-full p-5 flex-col lg:flex-row overflow-auto">
@@ -97,13 +92,3 @@ export default function CareerPath() {
             </div>
     );
   }
-  
-       {/* <motion.div
-          ref={ref}
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 100 }}
-          transition={{ duration: 1 }}
-          className="p-10 rounded"
-        >
-          <Iphone screenshotSrc="/phone.webp" />
-        </motion.div> */}

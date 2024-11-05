@@ -56,7 +56,7 @@ export default function SkillsSection() {
         <div className="flex flex-wrap justify-left lg-mt-4 lg:p-1  lg:h-full">
           {allTechnos && allTechnos.map((item, index) => (
             <motion.div 
-              key={item.name} 
+              key={index} 
               className="lg:m-2 lg:ml-10 m-2 p-4 bg-white rounded-full shadow-lg flex items-center justify-center lg:h-[130px] lg:w-[130px] h-[80px] w-[80px] "
               onClick={() => handleTechnoClick(item)}
               animate={{ y: [0, -10, 0] }} 
@@ -84,6 +84,7 @@ export default function SkillsSection() {
             TechnosTypes.map((techno) =>(
                 <div 
                 onClick={()=>setTechnoType(techno)}
+                key={techno.name}
                 className={`relative ${techno.style} m-1 lg:p-5  rounded-lg border-2 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105`}>
                   <div className="absolute bottom-0 left-0 p-5 m-5 " >
                     <h1 className="text-3xl text-white font-bold">{techno.name}</h1>
