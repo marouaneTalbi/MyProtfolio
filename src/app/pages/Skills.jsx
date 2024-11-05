@@ -4,7 +4,6 @@ import {Modal} from "../components/Modal";
 import {Technos, } from "../mock/technos";
 import {TechImages, TechnosTypes} from "../mock/technosImg";
 import { ArrowLeftCircleIcon } from "@heroicons/react/24/solid";
-
 import ImageSlider from "../components/imageSlider/ImageSlider"
 
 export default function SkillsSection() {
@@ -24,8 +23,6 @@ export default function SkillsSection() {
     setModalIsOpen(false);
   };
 
-
-
   useEffect(() => {
     if(technoType) {
       const technoObjects = Technos.map(techno => (
@@ -41,9 +38,9 @@ export default function SkillsSection() {
       { technoType &&
         <button  
             onClick={() => setTechnoType(null)} 
-            className="text-white hover:bg-blue-300 rounded px-4 py-2 mb-4 absolute top-2 left-0"
+            className="text-white  rounded lg:px-4 lg:py-2 mb-4 absolute lg:top-2 left-0 top-0 px-0 py-1"
         >
-            <ArrowLeftCircleIcon className="size-10 text-white-500" />
+            <ArrowLeftCircleIcon className="size-12 text-white-500" />
         </button>
       }
 
@@ -56,16 +53,12 @@ export default function SkillsSection() {
         transition={{ duration: 2 }}
         className="p-0 rounded  h-4/5"
         >
-        <div className="flex flex-wrap justify-left lg-mt-4 lg:p-1  h-full">
+        <div className="flex flex-wrap justify-left lg-mt-4 lg:p-1  lg:h-full">
           {allTechnos && allTechnos.map((item, index) => (
             <motion.div 
               key={item.name} 
               className="lg:m-2 lg:ml-10 m-2 p-4 bg-white rounded-full shadow-lg flex items-center justify-center lg:h-[130px] lg:w-[130px] h-[80px] w-[80px] "
               onClick={() => handleTechnoClick(item)}
-              // style={{
-              //   height: '130px',
-              //   width: '130px',
-              // }}
               animate={{ y: [0, -10, 0] }} 
               transition={{ 
                 duration: 0.6 + item.duration * 0.2, 
@@ -86,12 +79,12 @@ export default function SkillsSection() {
           ))}
         </div>
         </motion.div>:
-        <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-1 flex flex-col  w-full h-full g-red-500">
+        <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-1 flex flex-col  w-full h-full g-red-500 lg:py-4 py-4">
           {
             TechnosTypes.map((techno) =>(
                 <div 
                 onClick={()=>setTechnoType(techno)}
-                className={`relative ${techno.style} m-1 p-5 rounded-lg border-2 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105`}>
+                className={`relative ${techno.style} m-1 lg:p-5  rounded-lg border-2 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105`}>
                   <div className="absolute bottom-0 left-0 p-5 m-5 " >
                     <h1 className="text-3xl text-white font-bold">{techno.name}</h1>
                   </div> 

@@ -10,7 +10,7 @@ export default function DownloadButton() {
                 whileHover={{ scale: 1.05 }} // Animation au survol
                 whileTap={{ scale: 0.95 }} // Animation au clic
             >
-                Télécharger le CV
+                Télécharger
             </motion.a>
         </div>
     );

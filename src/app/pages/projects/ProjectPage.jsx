@@ -12,9 +12,9 @@ export default function ProjectPage({project, backToProjects}) {
             {
                 <button  
                     onClick={() => backToProjects()} 
-                    className="text-white  rounded lg:px-4 py-2 lg:mb-4 absolute lg:top-2 lg:left-0 top-2 right-2"
+                    className="text-white  rounded lg:px-4 lg:py-2 mb-4 absolute lg:top-2 left-0 top-0 px-0 py-1"
                 >
-                    <ArrowLeftCircleIcon className="lg:size-10 size-8 text-white-500" />
+                    <ArrowLeftCircleIcon className=" size-12 text-white-500" />
                 </button>
             }
 
@@ -22,7 +22,7 @@ export default function ProjectPage({project, backToProjects}) {
                 initial={{ opacity: 0, y: -20 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.5 }}
-                className="rounded-lg p-5 w-full h-full lg:grid lg:grid-cols-1 lg:grid-cols-2 lg:gap-4 flex flex-col overflow-auto mt-20 lg:mt-0"
+                className="rounded-lg p-5 w-full h-full lg:grid lg:grid-cols-1 lg:grid-cols-2 lg:gap-4 flex flex-col lg:overflow-hidden overflow-auto mt-20 lg:mt-0"
             >
                 <div className="flex flex-col lg:mb-4">
                     <h1 className="lg:text-5xl text-xl font-bold text-white mb-4">{project.name}</h1>
@@ -56,7 +56,7 @@ export default function ProjectPage({project, backToProjects}) {
                         <div className="flex flex-wrap">
                             <ul className="list-disc pl-5 mb-4 overflow-auto w-full">
                                 {project.techno.map((tech) => (
-                                    <li key={tech.name} className="text-gray-900 mb-1 lg:text-md text-xs lg:text-xl font-bold">{tech.name} ({tech.type})</li>
+                                    <li key={tech.name} className="text-gray-900 mb-1 lg:text-md text-xs lg:text-xl font-bold">{tech.name} </li>
                                 ))}
                             </ul>
                         </div>
@@ -89,12 +89,12 @@ export default function ProjectPage({project, backToProjects}) {
 
 
             </motion.div>
-{/* 
+
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity:  1  }}
                 transition={{ duration: 2 }}
-                    className=" p-5  absolute right-0 top-0" 
+                    className=" p-5  absolute  top-0 lg:right-0 lg:top-0 " 
                 >
                     <img src={`/projects/${project.img}`} alt={project.name} className="w-20" />
             </motion.div>
@@ -106,7 +106,7 @@ export default function ProjectPage({project, backToProjects}) {
                 className="absolute bottom-0 right-0 p-5 w-1/5"
             >
                     <img src={`/general/projects.svg`} alt={project.name} className="w-full" />
-            </motion.div> */}
+            </motion.div>
 
         </>
     );

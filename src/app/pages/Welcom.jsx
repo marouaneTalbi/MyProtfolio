@@ -17,7 +17,7 @@ export default function Welcom() {
 
   const navigation = (route) => {
     navigate(route);
-    setHideBar(true);
+    setHideBar(false);
   };
 
   const getStyleOfDiv = (style) => {
@@ -30,16 +30,14 @@ export default function Welcom() {
   }
 
   const sections = [
-
     {name:'PROJECTS', route:'/projects', img: 'projects.svg', style:'lg:row-start-1 lg:row-span-1 h-1/5 lg:h-96'},
-    {name:'PARCOURS', route:'/career', img: 'teaching.svg', style:'lg:row-start-2 lg:row-span-1 h-1/5 lg:h-96'},
+    {name:'PARCOURS', route:'/career', img: 'teaching.svg', style:'lg:row-start-2 lg:row-span-1 h-1/5 lg:h-96  mt-0 lg:mt-4 '},
     {name:'SKILLS', route:'/skills', img: 'skills.svg', style:'lg:row-start-1 lg:row-span-1 h-1/5 lg:h-96'},
-    {name:'RESUM', route:'/resum', img: 'resum.svg', style:'lg:row-start-2 lg:row-span-1 h-1/5 lg:h-96'},
+    {name:'RESUM', route:'/resum', img: 'resum.svg', style:'lg:row-start-2 lg:row-span-1 h-1/5 lg:h-96 mt-0 lg:mt-4'},
     {name:'CONTACT', route:'/contact', img: 'contact.svg', style:'lg:row-span-3 h-1/5 lg:h-full'},
   ]
 
   return (
-
     <>
       {
           !hideBloc && 
@@ -89,12 +87,10 @@ export default function Welcom() {
               <img src={`/general/code.svg`} className="w-full" />
             </motion.div>
           </div>
-
       }
-
       {
         hideBloc &&  
-        <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-0 lg:w-full lg:h-full w-full h-full flex flex-col h-auto    ">
+        <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-0 lg:w-full lg:h-full w-full h-full flex flex-col h-auto lg:py-0  py-6 ">
         {
           sections.map((section) => 
             (
@@ -108,13 +104,13 @@ export default function Welcom() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: inView ? 1 : 0 }}
                   transition={{ duration: 0.5 }}
+                  className="lg:blur-lg"
                   style={{
                     backgroundImage: `url(/general/${section.img})`,
                     backgroundPosition: 'center',
                     backgroundSize: 'contain',
                     backgroundRepeat: 'no-repeat',
                     height: '100%',
-                    filter: 'blur(10px)',
                     transition: 'filter 0.1s ease',
                   }}
                   onClick={()=>navigation(section.route)}

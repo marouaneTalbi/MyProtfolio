@@ -12,53 +12,51 @@ export default function CareerPath() {
     const inView = useInView(ref, { once: true });
   
     return (
-            <div className="flex lg:items-center lg:justify-center w-full h-full p-5 flex-col overflow-auto">
+            <div className="flex lg:items-center lg:justify-center w-full h-full p-5 flex-col lg:flex-row overflow-auto">
                 <div className="flex-1 ">
                     <VerticalTimeline>
                         <VerticalTimelineElement
-                            date="02/2024 - 09/2024"
+                            date="02/2024-09/2024"
                             iconStyle={{ background: '#fff', color: '#000' }}
                             icon={<FontAwesomeIcon icon={faBriefcase} className="h-6 w-6 text-blue-500" />}
-                            style={{height:150}}
+                            style={{height:120}}
                         >
                             <div >
-                                <h2 className="text-lg font-bold">Yomeva</h2>
-                                <h3 className="text-lg font-bold">Contrat en alternance</h3>
+                                <h3 className="text-md font-bold">Yomeva</h3>
+                                <h3 className="text-xs font-bold">Contrat en alternance</h3>
                                 <p>Développeur Full-stack</p>
                             </div>
         
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
-                            date="09/2022 - 02/2024"
+                            date="09/2022-02/2024"
                             iconStyle={{ background: '#fff', color: '#000' }}
                             icon={<FontAwesomeIcon icon={faBriefcase} className="h-6 w-6 text-blue-500" />}
-                            style={{height:150}}
+                            style={{height:120}}
 
                         >
-                            <h2 className="text-lg font-bold">Foncia</h2>
-                            <h3 className="text-lg font-bold">Contrat en alternance</h3>
+                            <h3 className="text-md font-bold">Foncia</h3>
+                            <h3 className="text-xs font-bold">Contrat en alternance</h3>
                             <p>Développeur Full-stack</p>
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
-                            date="03/2022 - 09/2022"
+                            date="03/2022-09/2022"
                             iconStyle={{ background: '#fff', color: '#000' }}
                             icon={<FontAwesomeIcon icon={faBriefcase} className="h-6 w-6 text-blue-500" />}
-                            style={{height:150}}
-
+                            style={{height:120}}
                         >
-                            <h2 className="text-lg font-bold">Thales</h2>
-                            <h3 className="text-lg font-bold">Contrat en alternance</h3>
-                            <p>Développeur Full-stack</p>
+                            <h3 className="text-md font-bold">Thales</h3>
+                            <h3 className="text-xs font-bold">Contrat en alternance</h3>
+                            <p className="text-xs">Développeur Full-stack</p>
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
-                            date="09/2021 - 03/2022"
+                            date="09/2021-03/2022"
                             iconStyle={{ background: '#fff', color: '#000' }}
                             icon={<FontAwesomeIcon icon={faBriefcase} className="h-6 w-6 text-blue-500" />}
-                            style={{height:150}}
-
+                            style={{height:120}}
                         >
-                            <h2 className="text-lg font-bold">Iviflo</h2>
-                            <h3 className="text-lg font-bold">Contrat en alternance</h3>
+                            <h3 className="text-md font-bold">Iviflo</h3>
+                            <h3 className="text-xs font-bold">Contrat en alternance</h3>
                             <p>Développeur Full-stack</p>
                         </VerticalTimelineElement>
                     </VerticalTimeline>

@@ -9,7 +9,7 @@ export default function Contact() {
     return (
         <>
 
-        <div className="flex flex-col justify-around lg:justify-normal w-full h-full lg:flex lg:flex-col lg:w-full lg:h-full ">
+        <div className="flex flex-col  lg:justify-normal w-full h-full lg:flex lg:flex-col lg:w-full lg:h-full mt-10 ">
 
             <h1 className="text-4xl font-bold text-center text-white mb-0 lg:mb-8 ">Contact</h1>
 
@@ -17,18 +17,18 @@ export default function Contact() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2 }}
-                className="flex flex-col items-left  justify-left  rounded-lg shadow-lg p-10  mx-auto w-full"
+                className="flex flex-col items-left  justify-left  rounded-lg shadow-lg p-10  mx-auto w-full mt-20"
             >
-                <p className="lg:text-xl lg:mb-2">📧 Email: {email}</p>
-                <p className="lg:text-xl lg:mb-2">📞 Phone: {phone}</p>
-                <p className="lg:text-xl lg:mb-2">Adresse: Corbeil-Essonnes, France 91100</p>
+                <p className="lg:text-xl text-sm lg:mb-2 ">📧 Email: {email}</p>
+                <p className="lg:text-xl text-sm lg:mb-2 mt-2">📞 Phone: {phone}</p>
+                <p className="lg:text-xl text-sm lg:mb-2 mt-2">Adresse: Corbeil-Essonnes, France 91100</p>
                 
-                    <p className="lg:text-xl text-xs lg:mb-2">
+                    <p className="lg:text-xl text-xs lg:mb-2 mt-5">
                         GitHub: <a href={github} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 mr-4">
                         https://github.com/marouaneTalbi
                         </a>
                     </p>
-                    <p className="lg:text-xl text-xs lg:mb-2">
+                    <p className="lg:text-xl text-xs lg:mb-2 mt-5">
                         LinkedIn: <a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                         https://www.linkedin.com/in/marouane-talbi-935776209/</a>
                     </p>
