@@ -13,7 +13,7 @@ export default function Contact() {
 
             <h1 className="text-4xl font-bold text-center text-white mb-0 lg:mb-8 ">Contact</h1>
 
-            <motion.div
+            <div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2 }}
@@ -33,19 +33,19 @@ export default function Contact() {
                         https://www.linkedin.com/in/marouane-talbi-935776209/</a>
                     </p>
                     
-            </motion.div>
+            </div>
 
         </div>
 
 
-            <motion.div
+            <div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2 }}
                 className="absolute bottom-10 right-0 p-2 w-2/5 lg:bottom-0 lg:right-0 lg:p-5 lg:w-1/5"
             >
                 <img src={`/general/contact.svg`} className="w-full" />
-            </motion.div>
+            </div>
         </>
     );
 }

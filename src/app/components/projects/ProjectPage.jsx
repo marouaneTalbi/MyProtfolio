@@ -2,10 +2,11 @@
 
 import { ArrowLeftCircleIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
-
 import Typical from 'react-typical'
 
 export default function ProjectPage({project, backToProjects}) {
+
+    // console.log(project)
     return (
         <>
             {

@@ -1,3 +1,5 @@
+"use client";
+
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import {Modal} from "../components/Modal";
@@ -6,7 +8,7 @@ import {TechImages, TechnosTypes} from "../mock/technosImg";
 import { ArrowLeftCircleIcon } from "@heroicons/react/24/solid";
 import ImageSlider from "../components/imageSlider/ImageSlider"
 
-export default function SkillsSection() {
+export default function Skills() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
   const [modalIsOpen, setModalIsOpen] = useState(false);

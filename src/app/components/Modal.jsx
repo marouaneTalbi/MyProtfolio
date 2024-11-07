@@ -24,7 +24,7 @@ export const Modal = ({ techno, onClose }) => {
 
 
                         <div className="mt-5 p-4 lg:grid lg:grid-col-3 lg:grid-span-6 lg:grid-flow-col lg:gap-1 ">
-                            <div className="flex justify-left row-start-1 col-span-8 h-min w-3/3">
+                            <div className="flex justify-left row-start-1 col-span-3 h-min w-3/3 ">
                                 <div className="flex h-32 w-32 items-center justify-center rounded-full bg-gray-200 shadow-lg">
                                     <motion.img 
                                         src={`./technos/${techno.icon}.svg`} 
@@ -35,7 +35,7 @@ export const Modal = ({ techno, onClose }) => {
                                 </div>
                             </div>
 
-                            <div className="lg:row-start-2 lg:col-span-8 h-min w-4/4 ">
+                            <div className="lg:row-start-2 lg:col-span-3 h-min w-4/4 ">
                                 <h1 className="text-4xl text-gray-900 mt-5 text-white">{techno.name}</h1>
                                 <h3 className="mt-4 text-xl font-semi bold text-gray-900" id="modal-title">Technology Details</h3>
                                 <p className="mt-2  text-gray-900 text-xs">
@@ -45,7 +45,7 @@ export const Modal = ({ techno, onClose }) => {
 
                             {
                                 techno.projects && techno.projects.length > 0 && 
-                                <div className="lg:row-start-3 lg:col-span-8  w-3/3 ">
+                                <div className="lg:row-start-3 lg:col-span-3  w-3/3">
                                     <h4 className="mt-4 lg:text-xl font-semibold text-gray-800">Projects:</h4>
                                     <ul className="list-disc pl-5 mt-2">
                                         {techno.projects.map((project, index) => (

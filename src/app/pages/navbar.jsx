@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
 import { useSidebar } from "../context/sideBarContext";
-import { ArrowLeftCircleIcon } from '@heroicons/react/24/solid'
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '@heroicons/react/24/solid'
 import { useState } from "react";
+import { useMediaQuery } from 'react-responsive';
 import { useNavigate } from "react-router-dom";
-// import { useMediaQuery } from 'react-responsive';
 
-export default function Sidebar() {
+export default function NavBar() {
     const {setHideBar } = useSidebar();
     const [isVisible, setIsVisible] = useState(true);
+    const isMobile = useMediaQuery({ maxWidth: 768 });
     const navigate = useNavigate();
-    // const isMobile = useMediaQuery({ maxWidth: 768 });
 
     const navigation = (route) => {
 
-        // if(isMobile){
-        //     handleClose();
-        // }
+        if(isMobile){
+            handleClose();
+        }
         navigate(route);
     }
 
@@ -35,13 +35,9 @@ export default function Sidebar() {
 
     return (
         <motion.div 
-            // initial={{ opacity: 0, x: isMobile ? 250 : 0 }} 
-            // animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: isMobile ? 250 : 0 }} 
-            // exit={{ opacity: 0, x: isMobile ? 250 : 0 }}
-            // transition={{ duration: 0.5 }} 
-            initial={{ opacity: 0, x:  -250 }} 
-            animate={{ opacity: 1, x: 0 } } 
-            exit={{ opacity: 0, x:  -250  }}
+            initial={{ opacity: 0, x: isMobile ? 250 : 0 }} 
+            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: isMobile ? 250 : 0 }} 
+            exit={{ opacity: 0, x: isMobile ? 250 : 0 }}
             transition={{ duration: 0.5 }} 
             className="bg-gray-900 p-4 h-screen lg:static absolute right-0 z-50"
         >
@@ -49,7 +45,11 @@ export default function Sidebar() {
                 onClick={handleClose} 
                 className="text-white hover:bg-blue-300 rounded px-4 py-2 mb-4"
             >
-                <ArrowLeftCircleIcon className="size-10 text-white-500" />
+
+                {
+                
+                isMobile ? <ArrowRightCircleIcon className="size-10 text-white-500" /> : <ArrowLeftCircleIcon className="size-10 text-white-500" />
+                }
             </button>
             <motion.ul className="flex flex-col justify-end text-white font-sans p-10 mt-20">
                 {sections.map((item) => (
@@ -69,3 +69,4 @@ export default function Sidebar() {
 
     );
 }
+

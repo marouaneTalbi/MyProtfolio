@@ -1,12 +1,15 @@
+"use client";
+
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import ProjectPage from "./projects/ProjectPage"
+import ProjectPage from "../components/projects/ProjectPage"
 import {projects} from "../mock/projects"
 
 export default function ProjectsSection() {
     const ref = useRef(null);
     const inView = useInView(ref, { once: true });
     const [currentProject, setCurrentPreject] = useState(null)
+
 
     const getProject = (project) => {
       setCurrentPreject(project);
@@ -24,16 +27,15 @@ export default function ProjectsSection() {
             {  
               projects.map((project, index) => (
                 <div 
-                key={index}
-                className="relative lg:w-1/4 h-full m-1 p-10 lg:p-10 rounded-lg border-2 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105 ">
-                  <motion.div
+                  key={index}
+                  className="relative lg:w-1/4 h-full m-1 p-10 lg:p-10 rounded-lg border-2 border-white overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105 ">
+                  <div
                       key={index}
                       ref={ref}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: inView ? 1 : 0 }}
                       transition={{ duration: 1 }}
                       className="lg:blur-lg"
-
                       style={{
                         backgroundImage: `url(/projects/${project.img})`,
                         backgroundPosition: 'center',
@@ -51,7 +53,7 @@ export default function ProjectsSection() {
                         e.currentTarget.style.filter = 'blur(10px)'; 
                       }}
                     >
-                  </motion.div>
+                  </div>
                 </div>))
             }
           </div>

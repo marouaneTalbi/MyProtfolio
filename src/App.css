@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+
+.responsive-padding {
+  padding: 0rem; /* Valeur par défaut pour les petits écrans */
+}
+
+@media (min-width: 640px) { 
+  .responsive-padding {
+      padding: 5.5rem;
+  }
+}
+
+@media (min-width: 768px) { /* Pour les écrans de 768px et plus */
+  .responsive-padding {
+      padding: 4rem;
+  }
+}
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Orbitron', sans-serif; 
+}
+
+li {
+  color: var(--foreground);
+  font-family: 'Orbitron', sans-serif; 
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+h1 {
+  text-shadow: 
+    0 0 5px rgb(13, 0, 255),
+    0 0 10px rgb(13, 0, 255),
+    0 0 15px rgb(13, 0, 255);
+}
+
+.neon {
+    text-shadow: 
+      0 0 5px rgb(13, 0, 255),
+      0 0 10px rgb(13, 0, 255),
+      0 0 15px rgb(13, 0, 255);
+}
+
+::-webkit-scrollbar {
+  width: 4px; /* Largeur de la scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(13, 0, 255); /* Couleur du pouce de la scrollbar */
+  border-radius: 10px; /* Arrondi des coins */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Couleur de la piste */
+}
