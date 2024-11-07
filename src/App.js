@@ -2,15 +2,15 @@ import './App.css';
 import { motion } from "framer-motion";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CareerPath from './app/pages/career';
-import Welcom from './app/pages/welcom';
-import Resum from './app/pages/resum';
-import Contact from './app/pages/contact';
+import Welcom from './app/pages/Welcom';
+import Resum from './app/pages/Resum';
+import Contact from './app/pages/Contact';
 import NavBar from './app/pages/navbar';
 import { Bars3Icon } from '@heroicons/react/24/solid';
 import { useSidebar } from "./app/context/sideBarContext";
 import { useEffect, useState } from "react";
-import ProjectsSection from './app/pages/projects';
-import Skills from './app/pages/skills';
+import ProjectsSection from './app/pages/Projects';
+import Skills from './app/pages/Skills';
 import { AnimatedBackground } from 'animated-backgrounds';
 
 function App() {
