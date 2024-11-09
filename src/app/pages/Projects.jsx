@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import ProjectPage from "../components/projects/ProjectPage"
 import {projects} from "../mock/projects"
