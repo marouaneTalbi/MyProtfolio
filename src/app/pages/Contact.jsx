@@ -42,7 +42,7 @@ export default function Contact() {
                 transition={{ duration: 2 }}
                 className="absolute bottom-10 right-0 p-2 w-2/5 lg:bottom-0 lg:right-0 lg:p-5 lg:w-1/5"
             >
-                <img src={`/general/contact.svg`} className="w-full" />
+                <img src={`/general/contact.svg`} className="w-full" alt="contact" />
             </div>
         </>
     );

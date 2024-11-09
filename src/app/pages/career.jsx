@@ -84,7 +84,7 @@ export default function CareerPath() {
                 transition={{ duration: 2 }}
                 className="absolute bottom-0 right-0 p-5 lg:w-1/5 w-2/5"
             >
-                    <img src={`/general/teaching.svg`}  className="w-full" />
+                    <img src={`/general/teaching.svg`}  className="w-full" alt="teaching" />
             </div>
             </div>
     );

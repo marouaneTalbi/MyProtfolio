@@ -24,7 +24,7 @@ export default function Resum() {
                 transition={{ duration: 2 }}
                 className="absolute lg:bottom-0 lg:right-0 lg:p-5 lg:w-1/6 bottom-0 right-0 p-0 w-1/3"
             >
-                <img src={`/general/resum.svg`}  className="w-full" />
+                <img src={`/general/resum.svg`}  className="w-full" alt="resume"/>
             </motion.div>
         </>
     );
