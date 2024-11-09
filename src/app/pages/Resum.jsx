@@ -10,12 +10,12 @@ export default function Resum() {
             </div>
             <div className="flex flex-col items-center justify-center lg:justify-normal w-full h-full lg:flex lg:flex-col lg:w-full lg:h-full   lg:mb-0 mb-16">
                 <h1 className="text-4xl font-bold text-center text-white mb-0 lg:mb-8 mb-8 ">CV</h1>
-                <div className="flex items-center justify-center w-full lg:w-1/3 lg:p-2 bg-gray-200">
-                <img 
-                src={`/cv.jpg`} 
-                className="object-cover w-full h-auto max-h-full" 
-                alt="Mon CV" 
-                />
+                <div className="flex items-center justify-center w-full lg:w-1/4 lg:p-2 bg-gray-200">
+                    <img 
+                        src={`/cv.jpg`} 
+                        className="object-cover w-full h-auto max-h-full" 
+                        alt="Mon CV" 
+                    />
                 </div>
             </div>
             <motion.div

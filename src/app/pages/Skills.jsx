@@ -53,35 +53,39 @@ export default function Skills() {
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0 }}
         transition={{ duration: 2 }}
-        className="p-0 rounded  h-4/5"
+        className="lg:p-0 rounded  lg:h-4/5 h-full overflow-y-auto lg:mt-0 mt-20 h-full p-5 "
         >
-        <div className="flex flex-wrap justify-left lg-mt-4 lg:p-1  lg:h-full">
+        <div className="flex flex-wrap lg:justify-start justify-center lg-mt-4 lg:p-1  mb-5 lg:h-full ">
           {allTechnos && allTechnos.map((item, index) => (
-            <motion.div 
-              key={index} 
-              className="lg:m-2 lg:ml-10 m-2 p-4 bg-white rounded-full shadow-lg flex items-center justify-center lg:h-[130px] lg:w-[130px] h-[80px] w-[80px] "
-              onClick={() => handleTechnoClick(item)}
-              animate={{ y: [0, -10, 0] }} 
-              transition={{ 
-                duration: 0.6 + item.duration * 0.2, 
-                repeat: Infinity,
-                repeatType: "loop",
-                ease: "easeInOut"
-              }}
-            >
-              <img 
-                src={`./technos/${item.icon}.svg`} 
-                alt="Development Icon" 
-                style={{
-                  height: 150,
-                  width: 150,
+            <div className=" m-1 flex  flex-col lg:ml-0  m-1 items-center ">
+              <motion.div 
+                key={index} 
+                className="lg:m-2 m-2 p-4 bg-white rounded-full shadow-lg flex items-center justify-center lg:h-[130px] lg:w-[130px] h-[80px] w-[80px]"
+                onClick={() => handleTechnoClick(item)}
+                animate={{ y: [0, -10, 0] }} 
+                transition={{ 
+                  duration: 0.6 + item.duration * 0.2, 
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut"
                 }}
-              />
-            </motion.div>
+              >
+                <img 
+                  src={`./technos/${item.icon}.svg`} 
+                  alt="Development Icon" 
+                  style={{
+                    height: 150,
+                    width: 150,
+                  }}
+                />
+              </motion.div>
+              <h1 className="text-center text-white">{item.name}</h1>
+            </div>
+
           ))}
         </div>
         </motion.div>:
-        <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-1 flex flex-col  w-full h-full  lg:py-4 py-4">
+        <div className="lg:grid lg:grid-rows-2 lg:grid-flow-col lg:gap-1 flex flex-col w-full h-full lg:py-4 py-4">
           {
             TechnosTypes.map((techno) =>(
                 <div 

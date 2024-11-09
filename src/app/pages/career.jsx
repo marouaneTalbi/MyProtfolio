@@ -7,7 +7,7 @@ import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 export default function CareerPath() {
   
     return (
-            <div className="flex lg:items-center lg:justify-center w-full h-full p-5 flex-col lg:flex-row overflow-auto">
+            <div className="flex lg:items-center lg:justify-center w-full h-full p-5 flex-col lg:flex-row overflow-auto lg:overflow-hidden">
                 <div className="flex-1 ">
                     <VerticalTimeline>
                         <VerticalTimelineElement

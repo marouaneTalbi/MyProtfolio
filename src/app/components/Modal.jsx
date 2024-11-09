@@ -17,7 +17,7 @@ export const Modal = ({ techno, onClose }) => {
                     >
                         <button 
                             onClick={onClose} 
-                            className="absolute top-1  lg:right-2 px-2 lg:px-0  text-gray-500 hover:text-gray-900 focus:outline-none  "
+                            className="absolute top-1  lg:top-2 lg:right-3 px-2 lg:px-0  text-gray-500 hover:text-gray-900 focus:outline-none  "
                         >
                            <span className="text-2xl ">X</span>
                         </button>
