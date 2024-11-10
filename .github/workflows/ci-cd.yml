@@ -48,11 +48,17 @@ jobs:
 
     - name: Deploy to S3
       uses: jakejarvis/s3-sync-action@v0.5.0
-      with:
-        bucket: ${{ secrets.BUCKET }}
-        region: ${{ secrets.REGION }}
-        source_dir: './build'
-        aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        acl: 'public-read'
-        delete: true
+      # with:
+      #   bucket: ${{ secrets.BUCKET }}
+      #   region: ${{ secrets.REGION }}
+      #   source_dir: './build'
+      #   aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #   aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #   acl: 'public-read'
+      #   delete: true
+      env:
+        BUCKET: ${{ secrets.BUCKET }}
+        REGION:  ${{ secrets.REGION }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.S3_AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_AWS_SECRET_ACCESS_KEY }}
+        SOURCE_DIR: './build'
