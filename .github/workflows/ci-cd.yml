@@ -50,14 +50,7 @@ jobs:
       uses: jakejarvis/s3-sync-action@v0.5.0
       with:
         args: --follow-symlinks --delete
-      # with:
-      #   bucket: ${{ secrets.BUCKET }}
-      #   region: ${{ secrets.REGION }}
-      #   source_dir: './build'
-      #   aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #   aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #   acl: 'public-read'
-      #   delete: true
+
       env:
         AWS_S3_BUCKET: ${{ secrets.BUCKET }}
         AWS_REGION: ${{ secrets.REGION }}
