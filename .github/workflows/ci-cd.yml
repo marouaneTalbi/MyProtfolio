@@ -48,6 +48,8 @@ jobs:
 
     - name: Deploy to S3
       uses: jakejarvis/s3-sync-action@v0.5.0
+      with:
+        args: --follow-symlinks --delete
       # with:
       #   bucket: ${{ secrets.BUCKET }}
       #   region: ${{ secrets.REGION }}
@@ -59,6 +61,6 @@ jobs:
       env:
         BUCKET: ${{ secrets.BUCKET }}
         REGION:  ${{ secrets.REGION }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.S3_AWS_ACCESS_KEY_ID  }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_AWS_SECRET_ACCESS_KEY  }}
         SOURCE_DIR: './build'
