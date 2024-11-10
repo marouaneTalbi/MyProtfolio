@@ -53,7 +53,7 @@ export default function Skills() {
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0 }}
         transition={{ duration: 2 }}
-        className="lg:p-0 rounded  lg:h-4/5 h-full lg:overflow-y-none overflow-y-auto lg:mt-0 mt-20 h-full p-5 "
+        className="lg:p-0 rounded  lg:h-4/5 h-full lg:overflow-hidden overflow-y-auto lg:mt-0 mt-20 h-full p-5 "
         >
         <div className="flex flex-wrap lg:justify-start justify-center lg-mt-4 lg:p-1  mb-5 lg:h-full ">
           {allTechnos && allTechnos.map((item, index) => (
