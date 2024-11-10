@@ -51,6 +51,7 @@ jobs:
       with:
         args: --follow-symlinks --delete
 
+
       env:
         AWS_S3_BUCKET: ${{ secrets.BUCKET }}
         AWS_REGION: ${{ secrets.REGION }}
