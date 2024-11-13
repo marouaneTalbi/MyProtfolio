@@ -9,13 +9,11 @@ export default function Resum() {
                 <DownloadButton />
             </div>
             <div 
-            // className="flex flex-col items-center justify-center lg:justify-normal w-full h-full lg:flex lg:flex-col lg:w-full lg:h-full   lg:mb-0 mb-16 bg-red-500"
-            className="flex flex-col items-center justify-center lg:justify-normal w-full h-full lg:flex lg:flex-col lg:w-full lg:h-full   mb-16 "
+            className="flex flex-col items-center justify-center lg:justify-normal w-full h-full lg:flex lg:flex-col lg:w-full lg:h-full   mb-10 "
             >
-                <h1 className="text-4xl font-bold text-center text-white lg:mb-2 mb-4 ">CV</h1>
+                {/* <h1 className="text-4xl font-bold text-center text-white lg:mb-2 mb-4 ">CV</h1> */}
                 <div 
-                // className="flex items-center justify-center w-full lg:w-1/4 lg:p-2 bg-gray-200" 
-                className="flex items-center justify-center  lg:p-5 bg-gray-200 lg:w-2/6">
+                className="flex items-center justify-center   lg:w-2/6">
                     <img 
                         src={`/cv.jpg`} 
                         className="object-cover w-full h-auto max-h-full" 
