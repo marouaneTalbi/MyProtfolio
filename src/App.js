@@ -42,7 +42,7 @@ function App() {
             !showSideBar && 
             <button  
             onClick={() => setHideBar(true)} 
-            className="text-gray-400 rounded border-2 border-gray-500 absolute top-2 right-2 lg:top-4 lg:left-3 bg-gray-50 h-10 w-10  flex items-center justify-center rounded-full z-50"
+            className="text-gray-400 rounded border-2 border-gray-500 absolute top-2 right-4 lg:top-4 lg:left-3 bg-gray-50 h-10 w-10  flex items-center justify-center rounded-full z-50"
           >
             <Bars3Icon className="size-8 text-white-500" />
           </button>
