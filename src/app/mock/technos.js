@@ -8,7 +8,7 @@ export const Technos = [
     {project:'amadeus', name:'AMADEUS', icon:'thales.png', company:'Thales'},
     {project:'etoile', name:'ETOILE', icon:'yomeva.png', company:'Yomeva'}
   ]   },
-  { icon: 'nodedotjs', type:'web', name: 'Nodedotjs', open:"true", projects:[
+  { icon: 'nodedotjs', type:'web', name: 'Nodejs', open:"true", projects:[
     {repo:'https://github.com/marouaneTalbi/nodejs_vuejs'},
     {repo:'https://github.com/TheoBourdel/hackathon'},
     {repo:'https://github.com/TheoBourdel/CuisineConnect'},
@@ -47,7 +47,7 @@ export const Technos = [
      {project:'alto_tour', name:'ALTO TOUR', icon:'iviflo.png', company:'Iviflo'},
     {project:'amadeus', name:'AMADEUS', icon:'thales.png', company:'Thales'},
   ]    },
-  { icon: 'vuedotjs', name: 'Vuedotjs', type:'web', open:"true", projects:[
+  { icon: 'vuedotjs', name: 'Vuejs', type:'web', open:"true", projects:[
     {repo:'https://github.com/marouaneTalbi/nodejs_vuejs'},
   ] , company_project:[
     {project:'etoile', name:'ETOILE', icon:'yomeva.png', company:'Yomeva'}
@@ -172,7 +172,7 @@ export const Technos = [
   { icon: 'tailwindcss', name: 'Tailwindcss',  type:'web',open:"true", projects:[
     {repo:'https://github.com/marouaneTalbi/baby-sitting'}
   ], company_project:[]  },
-  { icon: 'nextdotjs', name: 'Nextdotjs', type:'web', open:"true", projects:[
+  { icon: 'nextdotjs', name: 'Nextjs', type:'web', open:"true", projects:[
     {repo:'https://github.com/marouaneTalbi/MyProtfolio'},
   ] , company_project:[]  },
   { icon: 'dbeaver', name: 'Dbeaver', open:"true", type:'outil', projects:[], company_project:[

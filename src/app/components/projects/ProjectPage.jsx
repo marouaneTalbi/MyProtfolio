@@ -6,25 +6,27 @@ import Typical from 'react-typical'
 
 export default function ProjectPage({project, backToProjects}) {
 
-    // console.log(project)
     return (
         <>
             {
-                <button  
-                    onClick={() => backToProjects()} 
-                    className="text-white  rounded lg:px-4 lg:py-2 mb-4 absolute lg:top-2 left-0 top-0 px-0 py-1"
-                >
-                    <ArrowLeftCircleIcon className=" size-12 text-white-500" />
-                </button>
+                <div className="p-0 bg-red-500 absolute left-2 top-2 mt-1">
+                    <button  
+                        onClick={() => backToProjects()} 
+                        className="text-white rounded lg:px-4 lg:py-2  absolute left-0 top-0"
+
+                    >
+                        <ArrowLeftCircleIcon className=" size-12 text-white-500" />
+                    </button>
+                </div>
             }
 
             <motion.div 
                 initial={{ opacity: 0, y: -20 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.5 }}
-                className="rounded-lg p-5 w-full h-full lg:grid lg:grid-cols-1 lg:grid-cols-2 lg:gap-4 flex flex-col lg:overflow-hidden overflow-auto mt-20 lg:mt-0"
+                className="rounded-lg p-5 w-full h-full lg:grid lg:grid-cols-1 lg:grid-cols-2 lg:gap-4 flex flex-col lg:overflow-hidden overflow-auto mt-0 lg:mt-0"
             >
-                <div className="flex flex-col lg:mb-4">
+                <div className="flex flex-col lg:mb-4 mt-20 lg:mt:0">
                     <h1 className="lg:text-5xl text-xl font-bold text-white mb-4">{project.name}</h1>
                     <h2 className="lg:text-2xl text-lg font-semibold text-gray-800 mb-2">{project.company}</h2>
                     <p className="text-gray-700 mb-4 lg:text-xl text-xs font-bold">
@@ -104,7 +106,7 @@ export default function ProjectPage({project, backToProjects}) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity:  1  }}
                 transition={{ duration: 2 }}
-                className="absolute bottom-0 right-0 p-5 w-1/5"
+                className="absolute bottom-0 right-0 p-5 lg:w-1/6 w-2/6"
             >
                     <img src={`/general/projects.svg`} alt={project.name} className="w-full" />
             </motion.div>

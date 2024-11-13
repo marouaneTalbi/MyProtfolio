@@ -49,7 +49,6 @@ export default function ProjectsSection() {
                         e.currentTarget.style.filter = 'blur(0px)'; 
                       }}
                       onMouseLeave={(e) => {
-                        console.log(window.innerWidth)
                         e.currentTarget.style.filter = 'blur(10px)'; 
                       }}
                     >

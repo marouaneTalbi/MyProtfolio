@@ -38,12 +38,18 @@ export default function Skills() {
   return (
     <>
       { technoType &&
+
+      <div className="p-0 bg-red-500 absolute left-2 top-2 mt-1">
         <button  
             onClick={() => setTechnoType(null)} 
-            className="text-white  rounded lg:px-4 lg:py-2 mb-4 absolute lg:top-2 left-0 top-0 px-0 py-1"
+            className="text-white rounded lg:px-4 lg:py-2  absolute left-0 top-0"
+
         >
             <ArrowLeftCircleIcon className="size-12 text-white-500" />
         </button>
+
+      </div>
+
       }
 
       {
@@ -53,7 +59,7 @@ export default function Skills() {
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0 }}
         transition={{ duration: 2 }}
-        className="lg:p-0 rounded  lg:h-4/5 h-full lg:overflow-hidden overflow-y-auto lg:mt-0 mt-20 h-full p-5 "
+        className="lg:p-0 rounded  lg:h-4/5 h-full lg:overflow-hidden overflow-y-auto lg:mt-0 mt-20 h-full p-5"
         >
         <div className="flex flex-wrap lg:justify-start justify-center lg-mt-4 lg:p-1  mb-5 lg:h-full ">
           {allTechnos && allTechnos.map((item, index) => (

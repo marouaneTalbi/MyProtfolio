@@ -2,6 +2,7 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import '../../../node_modules/react-vertical-timeline-component/style.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { motion } from "framer-motion";
 
 export default function CareerPath() {
   
@@ -78,14 +79,14 @@ export default function CareerPath() {
                     </VerticalTimeline>
                 </div>
        
-            <div
+            <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity:  1  }}
                 transition={{ duration: 2 }}
-                className="absolute bottom-0 right-0 p-5 lg:w-1/5 w-2/5"
+                className="absolute bottom-0 right-0 p-5 w-2/6 lg:w-1/6 "
             >
                     <img src={`/general/teaching.svg`}  className="w-full" alt="teaching" />
-            </div>
+            </motion.div>
             </div>
     );
   }

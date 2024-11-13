@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function Contact() {
     const email = "talbi.marouane@gmail.com";
     const phone = "0769323701";
@@ -36,14 +38,14 @@ export default function Contact() {
         </div>
 
 
-            <div
+            <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2 }}
-                className="absolute bottom-10 right-0 p-2 w-2/5 lg:bottom-0 lg:right-0 lg:p-5 lg:w-1/5"
+                className="absolute bottom-0 right-0 p-5 w-2/6 lg:w-1/6 "
             >
                 <img src={`/general/contact.svg`} className="w-full" alt="contact" />
-            </div>
+            </motion.div>
         </>
     );
 }

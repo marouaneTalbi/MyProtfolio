@@ -24,7 +24,7 @@ function App() {
 
   return (
     <Router>
-      <div className='relative min-h-screen   bg-cover bg-fixed bg-center flex w-full  '>
+      <div className='relative min-h-screen   bg-cover bg-fixed bg-center flex w-full'>
         <AnimatedBackground animationName="particleNetwork" />
 
         <div className=" w-15">
@@ -36,13 +36,13 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, x: -250 }}
           transition={{ duration: 0.5 }}
-          className="flex-1 bg-cover bg-center backdrop-blur-sm overflow-hidden flex items-center justify-center h-screen lg:p-20 lg:py:0 py-10"
+          className="flex-1 bg-cover bg-center backdrop-blur-sm overflow-hidden flex items-center justify-center h-screen lg:p-20 lg:py:0 py-8"
         >
           {
             !showSideBar && 
             <button  
             onClick={() => setHideBar(true)} 
-            className="text-gray-400 rounded border-2 border-gray-500 absolute top-4 right-4 lg:top-4 lg:left-3 bg-gray-50 h-10 w-10  flex items-center justify-center rounded-full z-50"
+            className="text-gray-400 rounded border-2 border-gray-500 absolute top-2 right-2 lg:top-4 lg:left-3 bg-gray-50 h-10 w-10  flex items-center justify-center rounded-full z-50"
           >
             <Bars3Icon className="size-8 text-white-500" />
           </button>

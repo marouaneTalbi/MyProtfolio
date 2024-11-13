@@ -20,7 +20,9 @@ export default function Welcom() {
     setHideBar(false);  
   };
 
-  const presentation = `Développeur Full Stack passionné, je crée des solutions web dynamiques avec React, Symfony et AWS. Toujours à la recherche de nouveaux défis, je m'engage à offrir une expérience utilisateur de qualité tout en optimisant les performances des applications.`;
+  const presentation = `Développeur Full Stack passionné, je crée des solutions web dynamiques avec React, 
+  Symfony et AWS. Toujours à la recherche de nouveaux défis, je m'engage à offrir une expérience utilisateur
+   de qualité tout en optimisant les performances des applications.`;
 
   return (
     <>
@@ -30,7 +32,7 @@ export default function Welcom() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-4xl lg:text-6xl font-bold text-white text-center"
+            className="text-3xl lg:text-6xl font-bold text-white text-center"
           >
             <Typical steps={['M', 500, 'Marouane TALBI', 500]} loop={4} wrapper="p" />
           </motion.h1>
@@ -46,7 +48,7 @@ export default function Welcom() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-lg sm:text-xl text-white mt-4 text-left"
+            className="text-lg sm:text-xl text-white mt-4 text-left neon"
           >
             {presentation}
           </motion.p>
@@ -77,7 +79,7 @@ export default function Welcom() {
                   height: '100%',
                   transition: 'filter 0.1s ease',
                 }}
-                onClick={() => navigation(section.route)} // Navigue vers la route du section
+                onClick={() => navigation(section.route)} 
                 onMouseEnter={(e) => {
                   e.currentTarget.style.filter = 'blur(0px)';
                 }}
